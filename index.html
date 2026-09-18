@@ -61,7 +61,7 @@
         "@id": "https://suhani-aayush.wedding/#event",
         "name": "Suhani & Aayush Royal Wedding Ceremony",
         "description": "The wedding celebrations of Suhani Khetan and Aayush Agarwal in royal Rajasthani tradition.",
-        "startDate": "2026-12-08T10:00:00+05:30",
+        "startDate": "2026-12-08T14:00:00+05:30",
         "endDate": "2026-12-12T23:59:00+05:30",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -221,76 +221,118 @@
       <span class="motif reveal" aria-hidden="true">✦ ❖ ✦</span>
       <p class="eyebrow reveal reveal-delay-1" data-i18n="celebrations_eyebrow">Ceremonies &amp; Festivities</p>
       <h2 class="title reveal reveal-delay-1" id="celebrations-heading" data-i18n="celebrations_title">The wedding festivities</h2>
-      <p class="lead reveal reveal-delay-2" data-i18n="celebrations_lead">Six cherished moments. One unforgettable celebration.</p>
+      <p class="lead reveal reveal-delay-2" data-i18n="celebrations_lead">Nine cherished moments. One unforgettable celebration.</p>
 
       <!-- Royal Festivity Tabs Component -->
       <div class="tabs-container">
         <!-- Horizontal Scrollable Tab Navigation -->
         <div class="tabs-nav-wrapper">
           <div class="festivity-tabs" role="tablist" aria-label="Wedding Ceremonies and Celebrations">
-            <button class="festivity-tab-btn active" role="tab" id="tab-haldi" aria-selected="true" aria-controls="panel-haldi" tabindex="0" data-index="0" data-theme="haldi">
+            <!-- 01: Mangal Paath -->
+            <button class="festivity-tab-btn active" role="tab" id="tab-mangal-paath" aria-selected="true" aria-controls="panel-mangal-paath" tabindex="0" data-index="0" data-theme="mangal-paath">
               <span class="tab-badge">01</span>
               <span class="tab-icon-wrap" aria-hidden="true">
-                <img src="assets/images/events/haldi.svg" alt="" width="24" height="24" loading="lazy">
+                <img src="assets/images/events/mangal-paath.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab1_name">Haldi</span>
+                <span class="tab-name" data-i18n="tab1_name">Mangal Paath</span>
                 <span class="tab-date" data-i18n="tab1_date">08 Dec</span>
               </span>
             </button>
 
-            <button class="festivity-tab-btn" role="tab" id="tab-mehendi" aria-selected="false" aria-controls="panel-mehendi" tabindex="-1" data-index="1" data-theme="mehendi">
+            <!-- 02: Ganesh Pooja -->
+            <button class="festivity-tab-btn" role="tab" id="tab-ganesh-pooja" aria-selected="false" aria-controls="panel-ganesh-pooja" tabindex="-1" data-index="1" data-theme="ganesh-pooja">
               <span class="tab-badge">02</span>
               <span class="tab-icon-wrap" aria-hidden="true">
-                <img src="assets/images/events/mehendi.svg" alt="" width="24" height="24" loading="lazy">
+                <img src="assets/images/events/ganesh-pooja.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab2_name">Mehendi</span>
+                <span class="tab-name" data-i18n="tab2_name">Ganesh Pooja</span>
                 <span class="tab-date" data-i18n="tab2_date">09 Dec</span>
               </span>
             </button>
 
-            <button class="festivity-tab-btn" role="tab" id="tab-engagement" aria-selected="false" aria-controls="panel-engagement" tabindex="-1" data-index="2" data-theme="engagement">
+            <!-- 03: Haldi -->
+            <button class="festivity-tab-btn" role="tab" id="tab-haldi" aria-selected="false" aria-controls="panel-haldi" tabindex="-1" data-index="2" data-theme="haldi">
               <span class="tab-badge">03</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <img src="assets/images/events/haldi.svg" alt="" width="24" height="24" loading="lazy">
+              </span>
+              <span class="tab-text-group">
+                <span class="tab-name" data-i18n="tab3_name">Haldi</span>
+                <span class="tab-date" data-i18n="tab3_date">10 Dec</span>
+              </span>
+            </button>
+
+            <!-- 04: Mehendi -->
+            <button class="festivity-tab-btn" role="tab" id="tab-mehendi" aria-selected="false" aria-controls="panel-mehendi" tabindex="-1" data-index="3" data-theme="mehendi">
+              <span class="tab-badge">04</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <img src="assets/images/events/mehendi.svg" alt="" width="24" height="24" loading="lazy">
+              </span>
+              <span class="tab-text-group">
+                <span class="tab-name" data-i18n="tab4_name">Mehendi</span>
+                <span class="tab-date" data-i18n="tab4_date">10 Dec</span>
+              </span>
+            </button>
+
+            <!-- 05: Engagement -->
+            <button class="festivity-tab-btn" role="tab" id="tab-engagement" aria-selected="false" aria-controls="panel-engagement" tabindex="-1" data-index="4" data-theme="engagement">
+              <span class="tab-badge">05</span>
               <span class="tab-icon-wrap" aria-hidden="true">
                 <img src="assets/images/events/engagement.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab3_name">Engagement</span>
-                <span class="tab-date" data-i18n="tab3_date">11 Dec</span>
+                <span class="tab-name" data-i18n="tab5_name">Engagement</span>
+                <span class="tab-date" data-i18n="tab5_date">11 Dec</span>
               </span>
             </button>
 
-            <button class="festivity-tab-btn" role="tab" id="tab-sangeet" aria-selected="false" aria-controls="panel-sangeet" tabindex="-1" data-index="3" data-theme="sangeet">
-              <span class="tab-badge">04</span>
+            <!-- 06: Sangeet -->
+            <button class="festivity-tab-btn" role="tab" id="tab-sangeet" aria-selected="false" aria-controls="panel-sangeet" tabindex="-1" data-index="5" data-theme="sangeet">
+              <span class="tab-badge">06</span>
               <span class="tab-icon-wrap" aria-hidden="true">
                 <img src="assets/images/events/sangeet.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab4_name">Sangeet</span>
-                <span class="tab-date" data-i18n="tab4_date">11 Dec</span>
+                <span class="tab-name" data-i18n="tab6_name">Sangeet</span>
+                <span class="tab-date" data-i18n="tab6_date">11 Dec</span>
               </span>
             </button>
 
-            <button class="festivity-tab-btn" role="tab" id="tab-barat" aria-selected="false" aria-controls="panel-barat" tabindex="-1" data-index="4" data-theme="barat">
-              <span class="tab-badge">05</span>
+            <!-- 07: Mayra -->
+            <button class="festivity-tab-btn" role="tab" id="tab-mayra" aria-selected="false" aria-controls="panel-mayra" tabindex="-1" data-index="6" data-theme="mayra">
+              <span class="tab-badge">07</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <img src="assets/images/events/mayra.svg" alt="" width="24" height="24" loading="lazy">
+              </span>
+              <span class="tab-text-group">
+                <span class="tab-name" data-i18n="tab7_name">Mayra</span>
+                <span class="tab-date" data-i18n="tab7_date">12 Dec</span>
+              </span>
+            </button>
+
+            <!-- 08: Baraat Swagat -->
+            <button class="festivity-tab-btn" role="tab" id="tab-barat" aria-selected="false" aria-controls="panel-barat" tabindex="-1" data-index="7" data-theme="barat">
+              <span class="tab-badge">08</span>
               <span class="tab-icon-wrap" aria-hidden="true">
                 <img src="assets/images/events/barat-swagat.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab5_name">Barat Swagat</span>
-                <span class="tab-date" data-i18n="tab5_date">12 Dec</span>
+                <span class="tab-name" data-i18n="tab8_name">Baraat Swagat</span>
+                <span class="tab-date" data-i18n="tab8_date">12 Dec</span>
               </span>
             </button>
 
-            <button class="festivity-tab-btn" role="tab" id="tab-wedding" aria-selected="false" aria-controls="panel-wedding" tabindex="-1" data-index="5" data-theme="wedding">
-              <span class="tab-badge">06</span>
+            <!-- 09: The Wedding -->
+            <button class="festivity-tab-btn" role="tab" id="tab-wedding" aria-selected="false" aria-controls="panel-wedding" tabindex="-1" data-index="8" data-theme="wedding">
+              <span class="tab-badge">09</span>
               <span class="tab-icon-wrap" aria-hidden="true">
                 <img src="assets/images/events/wedding.svg" alt="" width="24" height="24" loading="lazy">
               </span>
               <span class="tab-text-group">
-                <span class="tab-name" data-i18n="tab6_name">The Wedding</span>
-                <span class="tab-date" data-i18n="tab6_date">12 Dec</span>
+                <span class="tab-name" data-i18n="tab9_name">The Wedding</span>
+                <span class="tab-date" data-i18n="tab9_date">12 Dec</span>
               </span>
             </button>
           </div>
@@ -298,8 +340,90 @@
 
         <!-- Featured Celebration Showcase Panels -->
         <div class="festivity-panels">
-          <!-- Panel 01: Haldi -->
-          <article class="festivity-panel active theme-haldi" id="panel-haldi" role="tabpanel" aria-labelledby="tab-haldi" tabindex="0">
+          <!-- Panel 01: Mangal Paath -->
+          <article class="festivity-panel active theme-mangal-paath" id="panel-mangal-paath" role="tabpanel" aria-labelledby="tab-mangal-paath" tabindex="0">
+            <div class="festivity-card">
+              <div class="panel-visual">
+                <div class="patrika-frame">
+                  <div class="patrika-inner">
+                    <img class="panel-painting" src="assets/images/mangal-paath-event.png" alt="Shri Rani Sati Dadi Ji Sacred Mangal Paath Shrine &amp; Darbar" width="300" height="400" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="panel-content">
+                <div class="panel-header">
+                  <span class="panel-tag" data-i18n="panel1_tag">✦ Auspicious Ritual ✦</span>
+                  <h3 class="panel-title" data-i18n="panel1_title">Shri Dadi Ji Mangal Paath</h3>
+                  <p class="panel-subtitle" data-i18n="panel1_subtitle">Devotional chanting, sacred hymns &amp; Kuldevi blessings</p>
+                </div>
+                
+                <div class="panel-meta-grid">
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_date">Date</span>
+                    <time class="meta-value" datetime="2026-12-08" data-i18n="panel1_date">Tuesday, 08 December 2026</time>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_time">Time</span>
+                    <span class="meta-value" data-i18n="panel1_time">Afternoon 02:00 PM onwards</span>
+                  </div>
+                  <div class="meta-item meta-venue">
+                    <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
+                    <address class="meta-value" data-i18n="panel1_venue">Khetan Home, Jhunjhunu</address>
+                  </div>
+                </div>
+
+                <p class="panel-desc" data-i18n="panel1_desc">Commencing our auspicious wedding festivities with the divine blessings of Shri Rani Sati Dadi Ji. Family and loved ones unite for an enchanting devotional Mangal Paath and spiritual bhajans to shower sacred grace upon the couple.</p>
+
+                <div class="panel-actions">
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3Qpw6zP7Wb7Zi5eU6" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Panel 02: Ganesh Pooja -->
+          <article class="festivity-panel theme-ganesh-pooja" id="panel-ganesh-pooja" role="tabpanel" aria-labelledby="tab-ganesh-pooja" tabindex="0" hidden>
+            <div class="festivity-card">
+              <div class="panel-visual">
+                <div class="patrika-frame">
+                  <div class="patrika-inner">
+                    <img class="panel-painting" src="assets/images/ganesh-pooja-event.png" alt="Sacred Lord Ganesh Sthapana &amp; Pooja Ceremony" width="300" height="400" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="panel-content">
+                <div class="panel-header">
+                  <span class="panel-tag" data-i18n="panel2_tag">✦ Sacred Invocation ✦</span>
+                  <h3 class="panel-title" data-i18n="panel2_title">Shree Ganesh Sthapana &amp; Pooja</h3>
+                  <p class="panel-subtitle" data-i18n="panel2_subtitle">Invoking Lord Ganesha for auspicious beginnings</p>
+                </div>
+                
+                <div class="panel-meta-grid">
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_date">Date</span>
+                    <time class="meta-value" datetime="2026-12-09" data-i18n="panel2_date">Wednesday, 09 December 2026</time>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_time">Time</span>
+                    <span class="meta-value" data-i18n="panel2_time">Morning 11:30 AM onwards</span>
+                  </div>
+                  <div class="meta-item meta-venue">
+                    <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
+                    <address class="meta-value" data-i18n="panel2_venue">Khetan Home, Jhunjhunu</address>
+                  </div>
+                </div>
+
+                <p class="panel-desc" data-i18n="panel2_desc">Invoking the supreme blessings of Vighnaharta Lord Ganesha with traditional Vedic chants, modak offerings, and Mangal Sthapana to ensure our wedding journey proceeds smoothly and joyfully.</p>
+
+                <div class="panel-actions">
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3Qpw6zP7Wb7Zi5eU6" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Panel 03: Haldi -->
+          <article class="festivity-panel theme-haldi" id="panel-haldi" role="tabpanel" aria-labelledby="tab-haldi" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
                 <div class="patrika-frame">
@@ -310,36 +434,36 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel1_tag">✦ Auspicious Ritual ✦</span>
-                  <h3 class="panel-title" data-i18n="panel1_title">Haldi Rasam</h3>
-                  <p class="panel-subtitle" data-i18n="panel1_subtitle">Sunshine, smiles and sacred turmeric blessings</p>
+                  <span class="panel-tag" data-i18n="panel3_tag">✦ Auspicious Ritual ✦</span>
+                  <h3 class="panel-title" data-i18n="panel3_title">Haldi Rasam</h3>
+                  <p class="panel-subtitle" data-i18n="panel3_subtitle">Sunshine, smiles and sacred turmeric blessings</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-08" data-i18n="panel1_date">Tuesday, 08 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-10" data-i18n="panel3_date">Thursday, 10 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel1_time">Morning 10:00 AM onwards</span>
+                    <span class="meta-value" data-i18n="panel3_time">Morning 11:30 AM onwards</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel1_venue">Agarsen Bhawan Courtyard, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel3_venue">Khetan Home, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel1_desc">A joyous morning draped in golden sunshine, marigold petals, and heartfelt blessings. Family and loved ones unite to apply fragrant haldi paste, sanctifying the bride and groom for their sacred journey ahead.</p>
+                <p class="panel-desc" data-i18n="panel3_desc">A joyous morning draped in golden sunshine, marigold petals, and heartfelt blessings. Family and loved ones unite to apply fragrant haldi paste, sanctifying the bride and groom for their sacred journey ahead.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3Qpw6zP7Wb7Zi5eU6" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Panel 02: Mehendi -->
+          <!-- Panel 04: Mehendi -->
           <article class="festivity-panel theme-mehendi" id="panel-mehendi" role="tabpanel" aria-labelledby="tab-mehendi" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
@@ -351,36 +475,36 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel2_tag">✦ Auspicious Ritual ✦</span>
-                  <h3 class="panel-title" data-i18n="panel2_title">Mehendi Ki Raat</h3>
-                  <p class="panel-subtitle" data-i18n="panel2_subtitle">An evening of intricate henna and musical memories</p>
+                  <span class="panel-tag" data-i18n="panel4_tag">✦ Auspicious Celebration ✦</span>
+                  <h3 class="panel-title" data-i18n="panel4_title">Mehendi Ki Raat</h3>
+                  <p class="panel-subtitle" data-i18n="panel4_subtitle">An evening of intricate henna and musical memories</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-09" data-i18n="panel2_date">Wednesday, 09 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-10" data-i18n="panel4_date">Thursday, 10 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel2_time">Evening 05:00 PM onwards</span>
+                    <span class="meta-value" data-i18n="panel4_time">Evening onwards</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel2_venue">Agarsen Bhawan Lawn, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel4_venue">Khetan Home, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel2_desc">An enchanting evening filled with the fragrant scent of fresh henna, folk melodies, and laughter. Watch the intricate mehndi bloom into deep crimson hues representing timeless love and prosperity.</p>
+                <p class="panel-desc" data-i18n="panel4_desc">An enchanting celebration filled with the fragrant scent of fresh henna, folk melodies, and laughter. Watch the intricate mehndi bloom into deep crimson hues representing timeless love and prosperity.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/3Qpw6zP7Wb7Zi5eU6" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Panel 03: Engagement -->
+          <!-- Panel 05: Engagement -->
           <article class="festivity-panel theme-engagement" id="panel-engagement" role="tabpanel" aria-labelledby="tab-engagement" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
@@ -392,36 +516,36 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel3_tag">✦ Auspicious Ceremony ✦</span>
-                  <h3 class="panel-title" data-i18n="panel3_title">The Royal Engagement</h3>
-                  <p class="panel-subtitle" data-i18n="panel3_subtitle">A sacred promise of forever &amp; ring ceremony</p>
+                  <span class="panel-tag" data-i18n="panel5_tag">✦ Auspicious Ceremony ✦</span>
+                  <h3 class="panel-title" data-i18n="panel5_title">The Royal Engagement (Sagai)</h3>
+                  <p class="panel-subtitle" data-i18n="panel5_subtitle">A sacred promise of forever &amp; ring ceremony</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-11" data-i18n="panel3_date">Friday, 11 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-11" data-i18n="panel5_date">Friday, 11 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel3_time">Afternoon 01:00 PM onwards</span>
+                    <span class="meta-value" data-i18n="panel5_time">Evening 06:00 PM onwards</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel3_venue">Royal Banquet Hall, Agarsen Bhawan, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel5_venue">Royal Banquet Hall, Agrasen Bhawan, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel3_desc">An elegant and royal gathering where two souls pledge their eternal devotion. Suhani and Aayush exchange rings amidst family warmth, sacred Vedic blessings, and celebratory toasts.</p>
+                <p class="panel-desc" data-i18n="panel5_desc">An elegant and royal gathering where two souls pledge their eternal devotion. Suhani and Aayush exchange rings amidst family warmth, sacred Vedic blessings, and celebratory toasts.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/N4aKyTfUwJiYLvmE7" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Panel 04: Sangeet -->
+          <!-- Panel 06: Sangeet -->
           <article class="festivity-panel theme-sangeet" id="panel-sangeet" role="tabpanel" aria-labelledby="tab-sangeet" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
@@ -433,36 +557,77 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel4_tag">✦ Auspicious Celebration ✦</span>
-                  <h3 class="panel-title" data-i18n="panel4_title">Sangeet Sandhya</h3>
-                  <p class="panel-subtitle" data-i18n="panel4_subtitle">Dance, laughter, dholak beats and a night to remember</p>
+                  <span class="panel-tag" data-i18n="panel6_tag">✦ Auspicious Celebration ✦</span>
+                  <h3 class="panel-title" data-i18n="panel6_title">Sangeet Sandhya</h3>
+                  <p class="panel-subtitle" data-i18n="panel6_subtitle">Dance, laughter, dholak beats and a night to remember</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-11" data-i18n="panel4_date">Friday, 11 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-11" data-i18n="panel6_date">Friday, 11 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel4_time">Night 07:30 PM onwards</span>
+                    <span class="meta-value" data-i18n="panel6_time">Night 07:00 PM onwards</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel4_venue">Main Palace Stage, Agarsen Bhawan, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel6_venue">Main Palace Stage, Agrasen Bhawan, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel4_desc">A dazzling night of rhythm, celebration, and joy! Both families come together on stage to celebrate the union with electric performances, Rajasthani folk dances, and foot-tapping music.</p>
+                <p class="panel-desc" data-i18n="panel6_desc">A dazzling night of rhythm, celebration, and joy! Both families come together on stage to celebrate the union with electric performances, Rajasthani folk dances, and foot-tapping music.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/N4aKyTfUwJiYLvmE7" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Panel 05: Barat Swagat -->
+          <!-- Panel 07: Mayra -->
+          <article class="festivity-panel theme-mayra" id="panel-mayra" role="tabpanel" aria-labelledby="tab-mayra" tabindex="0" hidden>
+            <div class="festivity-card">
+              <div class="panel-visual">
+                <div class="patrika-frame">
+                  <div class="patrika-inner">
+                    <img class="panel-painting" src="assets/images/mayra-event.png" alt="Traditional Rajasthani Mayra Bhaat Shagun &amp; Chunri Ceremony" width="300" height="400" loading="lazy">
+                  </div>
+                </div>
+              </div>
+              <div class="panel-content">
+                <div class="panel-header">
+                  <span class="panel-tag" data-i18n="panel7_tag">✦ Traditional Shagun ✦</span>
+                  <h3 class="panel-title" data-i18n="panel7_title">Shubh Mayra (Bhaat)</h3>
+                  <p class="panel-subtitle" data-i18n="panel7_subtitle">Maternal blessings, royal chunri &amp; traditional shagun</p>
+                </div>
+                
+                <div class="panel-meta-grid">
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_date">Date</span>
+                    <time class="meta-value" datetime="2026-12-12" data-i18n="panel7_date">Saturday, 12 December 2026</time>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label" data-i18n="meta_label_time">Time</span>
+                    <span class="meta-value" data-i18n="panel7_time">Morning 10:30 AM onwards</span>
+                  </div>
+                  <div class="meta-item meta-venue">
+                    <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
+                    <address class="meta-value" data-i18n="panel7_venue">Agrasen Bhawan Courtyard, Jhunjhunu</address>
+                  </div>
+                </div>
+
+                <p class="panel-desc" data-i18n="panel7_desc">A heartwarming Rajasthani tradition where maternal uncles and grandparents present auspicious Chunri, traditional shagun gifts, and heartfelt blessings to celebrate family lineage and love.</p>
+
+                <div class="panel-actions">
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/N4aKyTfUwJiYLvmE7" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Panel 08: Baraat Swagat -->
           <article class="festivity-panel theme-barat" id="panel-barat" role="tabpanel" aria-labelledby="tab-barat" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
@@ -474,36 +639,36 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel5_tag">✦ Auspicious Welcome ✦</span>
-                  <h3 class="panel-title" data-i18n="panel5_title">Shahi Barat Swagat</h3>
-                  <p class="panel-subtitle" data-i18n="panel5_subtitle">A royal Rajasthani welcome with ghodi, toran and shehnai</p>
+                  <span class="panel-tag" data-i18n="panel8_tag">✦ Auspicious Welcome ✦</span>
+                  <h3 class="panel-title" data-i18n="panel8_title">Shahi Baraat Swagat</h3>
+                  <p class="panel-subtitle" data-i18n="panel8_subtitle">A royal Rajasthani welcome with ghodi, toran and shehnai</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-12" data-i18n="panel5_date">Saturday, 12 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-12" data-i18n="panel8_date">Saturday, 12 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel5_time">Evening 04:30 PM onwards</span>
+                    <span class="meta-value" data-i18n="panel8_time">Evening onwards</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel5_venue">Grand Palace Entrance, Agarsen Bhawan, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel8_venue">Grand Palace Entrance, Agrasen Bhawan, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel5_desc">A grand arrival marked by the majestic regal ghodi, joyous brass bands, showering of rose petals, the traditional Toran ritual, and the affectionate Milni ceremony uniting both families.</p>
+                <p class="panel-desc" data-i18n="panel8_desc">A grand arrival marked by the majestic regal ghodi, joyous brass bands, showering of rose petals, the traditional Toran ritual, and the affectionate Milni ceremony uniting both families.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/N4aKyTfUwJiYLvmE7" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Panel 06: The Wedding -->
+          <!-- Panel 09: The Wedding -->
           <article class="festivity-panel theme-wedding" id="panel-wedding" role="tabpanel" aria-labelledby="tab-wedding" tabindex="0" hidden>
             <div class="festivity-card">
               <div class="panel-visual">
@@ -515,30 +680,30 @@
               </div>
               <div class="panel-content">
                 <div class="panel-header">
-                  <span class="panel-tag" data-i18n="panel6_tag">✦ The Sacred Union ✦</span>
-                  <h3 class="panel-title" data-i18n="panel6_title">The Royal Wedding (Pheras)</h3>
-                  <p class="panel-subtitle" data-i18n="panel6_subtitle">Sacred Vedic Agni Kund pheras &amp; our forever begins</p>
+                  <span class="panel-tag" data-i18n="panel9_tag">✦ The Sacred Union ✦</span>
+                  <h3 class="panel-title" data-i18n="panel9_title">Shubh Vivaah (Saat Pheras)</h3>
+                  <p class="panel-subtitle" data-i18n="panel9_subtitle">Sacred Vedic Agni Kund pheras &amp; our forever begins</p>
                 </div>
                 
                 <div class="panel-meta-grid">
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_date">Date</span>
-                    <time class="meta-value" datetime="2026-12-12" data-i18n="panel6_date">Saturday, 12 December 2026</time>
+                    <time class="meta-value" datetime="2026-12-12" data-i18n="panel9_date">Saturday, 12 December 2026</time>
                   </div>
                   <div class="meta-item">
                     <span class="meta-label" data-i18n="meta_label_time">Time</span>
-                    <span class="meta-value" data-i18n="panel6_time">Night 08:00 PM onwards</span>
+                    <span class="meta-value" data-i18n="panel9_time">Auspicious Wedding Muhurat</span>
                   </div>
                   <div class="meta-item meta-venue">
                     <span class="meta-label" data-i18n="meta_label_venue">Venue</span>
-                    <address class="meta-value" data-i18n="panel6_venue">Vedic Mandapam, Agarsen Bhawan, Jhunjhunu</address>
+                    <address class="meta-value" data-i18n="panel9_venue">Vedic Mandapam, Agrasen Bhawan, Jhunjhunu</address>
                   </div>
                 </div>
 
-                <p class="panel-desc" data-i18n="panel6_desc">Beneath the illuminated Mandapam and beside the sacred Agni Kund, Suhani and Aayush take the auspicious seven pheras and solemn vows, joining their hands and lives for eternity.</p>
+                <p class="panel-desc" data-i18n="panel9_desc">Beneath the illuminated Mandapam and beside the sacred Agni Kund, Suhani and Aayush take the auspicious seven pheras and solemn vows, joining their hands and lives for eternity.</p>
 
                 <div class="panel-actions">
-                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Agarsen+Bhawan+Jhunjhunu" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
+                  <a class="button festivity-btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/N4aKyTfUwJiYLvmE7" data-i18n="panel_btn">View Venue Location <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
             </div>
@@ -551,12 +716,15 @@
             <span aria-hidden="true">←</span> Previous
           </button>
           <div class="festivity-dots" role="tablist" aria-label="Celebration indicator dots">
-            <button class="dot-btn active" data-index="0" aria-label="Go to Haldi" type="button"></button>
-            <button class="dot-btn" data-index="1" aria-label="Go to Mehendi" type="button"></button>
-            <button class="dot-btn" data-index="2" aria-label="Go to Engagement" type="button"></button>
-            <button class="dot-btn" data-index="3" aria-label="Go to Sangeet" type="button"></button>
-            <button class="dot-btn" data-index="4" aria-label="Go to Barat Swagat" type="button"></button>
-            <button class="dot-btn" data-index="5" aria-label="Go to The Wedding" type="button"></button>
+            <button class="dot-btn active" data-index="0" aria-label="Go to Mangal Paath" type="button"></button>
+            <button class="dot-btn" data-index="1" aria-label="Go to Ganesh Pooja" type="button"></button>
+            <button class="dot-btn" data-index="2" aria-label="Go to Haldi" type="button"></button>
+            <button class="dot-btn" data-index="3" aria-label="Go to Mehendi" type="button"></button>
+            <button class="dot-btn" data-index="4" aria-label="Go to Engagement" type="button"></button>
+            <button class="dot-btn" data-index="5" aria-label="Go to Sangeet" type="button"></button>
+            <button class="dot-btn" data-index="6" aria-label="Go to Mayra" type="button"></button>
+            <button class="dot-btn" data-index="7" aria-label="Go to Baraat Swagat" type="button"></button>
+            <button class="dot-btn" data-index="8" aria-label="Go to The Wedding" type="button"></button>
           </div>
           <button class="festivity-nav-btn next-btn" aria-label="Next celebration" type="button" data-i18n="ctrl_next">
             Next <span aria-hidden="true">→</span>

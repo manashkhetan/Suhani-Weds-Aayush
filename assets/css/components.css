@@ -621,6 +621,18 @@
 }
 
 /* Event Specific Themes */
+.theme-mangal-paath {
+  --theme-color: #EC407A;
+  --theme-aura: rgba(236, 64, 122, 0.4);
+  --theme-border: rgba(236, 64, 122, 0.7);
+}
+
+.theme-ganesh-pooja {
+  --theme-color: #FF9800;
+  --theme-aura: rgba(255, 152, 0, 0.4);
+  --theme-border: rgba(255, 152, 0, 0.7);
+}
+
 .theme-haldi {
   --theme-color: #FFC107;
   --theme-aura: rgba(255, 193, 7, 0.35);
@@ -643,6 +655,12 @@
   --theme-color: #CE93D8;
   --theme-aura: rgba(206, 147, 216, 0.35);
   --theme-border: rgba(206, 147, 216, 0.65);
+}
+
+.theme-mayra {
+  --theme-color: #E91E63;
+  --theme-aura: rgba(233, 30, 99, 0.4);
+  --theme-border: rgba(233, 30, 99, 0.7);
 }
 
 .theme-barat {
