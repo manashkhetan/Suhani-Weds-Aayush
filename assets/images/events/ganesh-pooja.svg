@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Radiant Gold Gradient -->
+    <linearGradient id="ganeshGold" x1="15" y1="15" x2="65" y2="65" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF59D"/>
+      <stop offset="30%" stop-color="#FFD54F"/>
+      <stop offset="70%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+
+    <!-- Deep Saffron & Kumkum Gradient -->
+    <linearGradient id="saffronRed" x1="20" y1="30" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF7043"/>
+      <stop offset="50%" stop-color="#E64A19"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+
+    <!-- Copper Kalash Gradient -->
+    <linearGradient id="poojaKalash" x1="30" y1="45" x2="50" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFAB91"/>
+      <stop offset="40%" stop-color="#FF7043"/>
+      <stop offset="80%" stop-color="#D84315"/>
+      <stop offset="100%" stop-color="#8D2B0B"/>
+    </linearGradient>
+
+    <radialGradient id="ganeshAura" cx="40" cy="38" r="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.4"/>
+      <stop offset="65%" stop-color="#FF9800" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FF9800" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Aura Glow -->
+  <circle cx="40" cy="38" r="34" fill="url(#ganeshAura)"/>
+
+  <!-- Halo / Prabhavali -->
+  <circle cx="40" cy="28" r="18" stroke="url(#ganeshGold)" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+
+  <!-- Sacred Lord Ganesha Silhouette -->
+  <!-- Crown (Mukut) -->
+  <path d="M34 16 L40 8 L46 16 L43 20 L37 20 Z" fill="url(#ganeshGold)" stroke="#E65100" stroke-width="0.8"/>
+  <circle cx="40" cy="13" r="1.5" fill="#D50000"/>
+
+  <!-- Ears -->
+  <path d="M32 22 C24 20, 20 28, 28 34 C31 34, 32 30, 32 26 Z" fill="url(#ganeshGold)"/>
+  <path d="M48 22 C56 20, 60 28, 52 34 C49 34, 48 30, 48 26 Z" fill="url(#ganeshGold)"/>
+
+  <!-- Head & Face -->
+  <ellipse cx="40" cy="26" rx="9" ry="8" fill="url(#ganeshGold)"/>
+  
+  <!-- Sacred Tilak / Trishul mark -->
+  <path d="M38 21 L40 24 L42 21" stroke="#D50000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="40" y1="20" x2="40" y2="25" stroke="#D50000" stroke-width="1"/>
+  <circle cx="40" cy="25" r="0.8" fill="#FFEB3B"/>
+
+  <!-- Trunk with Modak curve -->
+  <path d="M38 28 C38 36, 44 38, 45 42 C45 45, 41 46, 39 44" stroke="url(#ganeshGold)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  
+  <!-- Modak Sweet in Trunk/Hand -->
+  <path d="M38 43 C37 40, 41 40, 40 43 C39.5 44, 38.5 44, 38 43 Z" fill="#FFE082" stroke="#FF8F00" stroke-width="0.6"/>
+
+  <!-- Holy Mangal Kalash with Coconut at Base -->
+  <path d="M30 60 C30 52, 50 52, 50 60 C50 68, 30 68, 30 60 Z" fill="url(#poojaKalash)"/>
+  <ellipse cx="40" cy="55" rx="9" ry="2.5" fill="#FFAB91"/>
+  
+  <!-- Sacred Red Mauli on Kalash -->
+  <ellipse cx="40" cy="60" rx="9" ry="1.5" stroke="#D50000" stroke-width="1.2" fill="none"/>
+  
+  <!-- Coconut (Shriphal) on Kalash -->
+  <circle cx="40" cy="51" r="5" fill="#5D4037" stroke="#3E2723" stroke-width="0.8"/>
+  
+  <!-- Mango Leaves (Aam ke Patte) -->
+  <path d="M34 53 C30 49, 32 46, 36 49 Z" fill="#4CAF50"/>
+  <path d="M46 53 C50 49, 48 46, 44 49 Z" fill="#4CAF50"/>
+  <path d="M40 49 C40 44, 42 44, 40 48 Z" fill="#66BB6A"/>
+
+  <!-- Modak Plate Flanking -->
+  <ellipse cx="22" cy="65" rx="8" ry="3.5" fill="url(#ganeshGold)"/>
+  <circle cx="20" cy="63" r="2" fill="#FFE082"/>
+  <circle cx="24" cy="63" r="2" fill="#FFE082"/>
+  <circle cx="22" cy="61" r="2" fill="#FFD54F"/>
+
+  <!-- Glowing Diya Lamp -->
+  <ellipse cx="58" cy="65" rx="7" ry="3" fill="url(#ganeshGold)"/>
+  <path d="M58 64 C56 61, 56 57, 58 54 C60 57, 60 61, 58 64 Z" fill="#FF9800"/>
+  <circle cx="58" cy="59" r="1.5" fill="#FFF9C4"/>
+</svg>

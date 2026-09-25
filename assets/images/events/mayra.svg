@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Royal Bandhani Red Gradient -->
+    <linearGradient id="bandhaniRed" x1="15" y1="20" x2="65" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF1744"/>
+      <stop offset="50%" stop-color="#D50000"/>
+      <stop offset="100%" stop-color="#880E4F"/>
+    </linearGradient>
+
+    <!-- Saffron & Yellow Chunri Gradient -->
+    <linearGradient id="chunriYellow" x1="20" y1="20" x2="60" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFEE58"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FB8C00"/>
+    </linearGradient>
+
+    <!-- Gold Shagun Thali Gradient -->
+    <linearGradient id="shagunGold" x1="10" y1="40" x2="70" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="35%" stop-color="#FFD54F"/>
+      <stop offset="70%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#B26A00"/>
+    </linearGradient>
+
+    <!-- Silver Coins Gradient -->
+    <linearGradient id="silverCoin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#ECEFF1"/>
+      <stop offset="100%" stop-color="#90A4AE"/>
+    </linearGradient>
+
+    <radialGradient id="mayraAura" cx="40" cy="40" r="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#E91E63" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#E91E63" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Aura Background -->
+  <circle cx="40" cy="40" r="35" fill="url(#mayraAura)"/>
+
+  <!-- Ornate Brass Shagun Thali Plate at Base -->
+  <ellipse cx="40" cy="58" rx="32" ry="14" fill="url(#shagunGold)" stroke="#FFF59D" stroke-width="1.2"/>
+  <ellipse cx="40" cy="56" rx="28" ry="11" fill="#FFF8E1" opacity="0.25"/>
+
+  <!-- Folded Royal Bandhani Dupatta Stack -->
+  <!-- Bottom Saffron Fold -->
+  <path d="M20 46 C24 43, 56 43, 60 46 C61 51, 19 51, 20 46 Z" fill="url(#chunriYellow)" stroke="#FFF59D" stroke-width="1"/>
+  <circle cx="28" cy="48" r="1" fill="#FFFFFF"/>
+  <circle cx="36" cy="48" r="1" fill="#FFFFFF"/>
+  <circle cx="44" cy="48" r="1" fill="#FFFFFF"/>
+  <circle cx="52" cy="48" r="1" fill="#FFFFFF"/>
+
+  <!-- Middle Rani Pink / Red Bandhani Fold -->
+  <path d="M22 39 C26 36, 54 36, 58 39 C59 44, 21 44, 22 39 Z" fill="url(#bandhaniRed)" stroke="#FFD54F" stroke-width="1"/>
+  <!-- Bandhani Dots -->
+  <circle cx="28" cy="41" r="1" fill="#FFF59D"/>
+  <circle cx="34" cy="40" r="1" fill="#FFF59D"/>
+  <circle cx="40" cy="41" r="1" fill="#FFF59D"/>
+  <circle cx="46" cy="40" r="1" fill="#FFF59D"/>
+  <circle cx="52" cy="41" r="1" fill="#FFF59D"/>
+
+  <!-- Top Golden Gota Patti Bandhani Fold -->
+  <path d="M25 32 C29 29, 51 29, 55 32 C56 37, 24 37, 25 32 Z" fill="url(#bandhaniRed)" stroke="#FFD54F" stroke-width="1.2"/>
+  <!-- Gold Gota Border -->
+  <path d="M25 36 Q40 37 55 36" stroke="#FFF59D" stroke-width="1.5" fill="none"/>
+
+  <!-- Auspicious Coconut (Shriphal) on Top -->
+  <circle cx="40" cy="22" r="7.5" fill="#6D4C41" stroke="#4E342E" stroke-width="1"/>
+  <ellipse cx="40" cy="22" rx="7.5" ry="3" stroke="#D50000" stroke-width="1.2" fill="none"/>
+  
+  <!-- Sacred Mango Leaves under Coconut -->
+  <path d="M33 25 C26 21, 28 17, 34 21 Z" fill="#43A047"/>
+  <path d="M47 25 C54 21, 52 17, 46 21 Z" fill="#43A047"/>
+  <path d="M40 16 C38 10, 42 10, 40 15 Z" fill="#66BB6A"/>
+
+  <!-- Royal Shagun Gold Jewellery & Silver Coins in Front -->
+  <!-- Silver Coins -->
+  <circle cx="22" cy="61" r="3.5" fill="url(#silverCoin)" stroke="#CFD8DC" stroke-width="0.6"/>
+  <circle cx="28" cy="63" r="3.5" fill="url(#silverCoin)" stroke="#CFD8DC" stroke-width="0.6"/>
+  <circle cx="34" cy="64" r="3.5" fill="url(#silverCoin)" stroke="#CFD8DC" stroke-width="0.6"/>
+
+  <!-- Gold Necklace / Jewellery Piece -->
+  <path d="M42 60 Q52 68 62 60" stroke="url(#shagunGold)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="46" cy="64" r="1.5" fill="#D50000"/>
+  <circle cx="52" cy="66" r="1.8" fill="#4CAF50"/>
+  <circle cx="58" cy="64" r="1.5" fill="#D50000"/>
+
+  <!-- Auspicious Kumkum & Haldi Katori -->
+  <circle cx="16" cy="56" r="3.2" fill="#D50000" stroke="#FFD54F" stroke-width="0.8"/>
+  <circle cx="64" cy="56" r="3.2" fill="#FFEB3B" stroke="#FFD54F" stroke-width="0.8"/>
+</svg>

@@ -1,0 +1,149 @@
+/**
+ * Responsive Breakpoints
+ * Mobile, Tablet, Laptop, Desktop, 4K Displays
+ */
+
+@media (max-width: 992px) {
+  .festivity-card {
+    grid-template-columns: clamp(290px, 35vw, 350px) 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .links {
+    display: none;
+  }
+
+  .hero {
+    min-height: 640px;
+  }
+
+  .hero::after {
+    inset: 10px;
+  }
+
+  .hero-copy {
+    padding: clamp(48px, 6vh, 60px) 16px 36px;
+    gap: clamp(20px, 3vh, 32px);
+  }
+
+  .ganesh-idol {
+    width: clamp(80px, 18vw, 98px);
+    height: clamp(94px, 21vw, 114px);
+    margin-bottom: 2px;
+  }
+
+  .hero .place {
+    margin-bottom: clamp(14px, 2vh, 20px);
+  }
+
+  .festivity-tabs {
+    justify-content: flex-start;
+  }
+
+  .festivity-card {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-visual {
+    padding: clamp(10px, 2.5vw, 16px);
+    border-right: none;
+    border-bottom: 1px solid var(--gold-border-subtle);
+  }
+
+  .patrika-frame {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    min-height: unset;
+    margin: 0 auto;
+  }
+
+  .panel-content {
+    padding: clamp(24px, 4vw, 36px) clamp(18px, 3vw, 26px);
+    text-align: center;
+  }
+
+  .panel-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .panel-meta-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: clamp(10px, 1.5vh, 14px);
+  }
+
+  .meta-venue {
+    grid-column: span 1;
+  }
+
+  .panel-actions {
+    justify-content: center;
+  }
+
+  .section.celebrations {
+    padding-left: clamp(8px, 2.5vw, 16px);
+    padding-right: clamp(8px, 2.5vw, 16px);
+  }
+
+  .festivity-carousel-wrapper {
+    padding: 0 clamp(42px, 8vw, 54px);
+  }
+
+  .festivity-carousel-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .festivity-carousel-arrow.prev-btn {
+    left: 2px;
+  }
+
+  .festivity-carousel-arrow.next-btn {
+    right: 2px;
+  }
+
+  .timer {
+    grid-template-columns: repeat(2, minmax(clamp(90px, 22vw, 130px), 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .festivity-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .festivity-carousel-wrapper {
+    padding: 0 40px;
+  }
+
+  .festivity-carousel-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .festivity-carousel-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-copy {
+    max-width: 1040px;
+  }
+
+  .tabs-container {
+    max-width: 1200px;
+  }
+}
+

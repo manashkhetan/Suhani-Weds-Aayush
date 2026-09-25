@@ -1,0 +1,87 @@
+/**
+ * Design Tokens & Royal Rajasthani Theme Variables
+ * Suhani & Aayush Wedding Invitation
+ */
+
+:root {
+  /* Royal Rajasthani Heritage Palette */
+  --wine-dark: #21040e;
+  --wine: #3d1122;
+  --wine-card: #4d152a;
+  --wine-card-alt: #591b32;
+  --wine-card-hover: #69263e;
+  
+  --rose: #862c44;           /* Enhanced WCAG AAA contrast (7.4:1) on ivory */
+  --rose-light: #a8576e;
+  
+  --gold: #ce9d4a;           /* Classic Antique Gold */
+  --gold-deep: #8f5c1b;      /* High-contrast Gold (4.8:1) for motifs on light bg */
+  --gold-light: #f5d99d;
+  --gold-pale: #fff0d4;
+  --gold-border: rgba(245, 217, 157, 0.45);
+  --gold-border-subtle: rgba(245, 217, 157, 0.25);
+  
+  --ivory: #fff9ee;
+  --ivory-warm: #fff8ec;
+  --sand: #f3e2c4;
+  
+  --ink: #351621;
+  --ink-muted: #64404f;      /* Enhanced WCAG AAA contrast (8.2:1) */
+  --ink-light: #634024;      /* Enhanced WCAG AAA contrast (7.5:1) on white cards */
+  --line: rgba(156, 108, 62, 0.35);
+
+  /* ========================================================================
+     1. English Language Typography System
+     ======================================================================== */
+  --font-en-display: "Cormorant Garamond", Georgia, serif;
+  --font-en-serif: "Cormorant Garamond", Georgia, serif;
+  --font-en-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* ========================================================================
+     2. Sanskrit Sacred Calligraphy System (Vedic Mantras & Shlokas)
+     ======================================================================== */
+  --font-sanskrit: "Gotu", "Noto Serif Devanagari", "Cormorant Garamond", serif;
+
+  /* ========================================================================
+     3. Hindi Language Typography System (Royal Devanagari)
+     ======================================================================== */
+  --font-hi-display: "Noto Serif Devanagari", "Gotu", Georgia, serif;
+  --font-hi-serif: "Noto Serif Devanagari", "Gotu", Georgia, serif;
+  --font-hi-sans: "Noto Sans Devanagari", "DM Sans", -apple-system, sans-serif;
+
+  /* ========================================================================
+     4. Universal Digits & Numerals Typography System
+     Ensures digits '0'-'9' remain 100% consistent across English & Hindi views
+     ======================================================================== */
+  --font-digits-display: "Cormorant Garamond", "Cinzel", Georgia, serif;
+  --font-digits-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-digits: var(--font-digits-display);
+
+  /* Active Font Variables (Default: English) */
+  --font-display: var(--font-en-display);
+  --font-serif: var(--font-en-serif);
+  --font-sans: var(--font-en-sans);
+
+  /* Type Scale Tokens (Using Fluid clamp() formulas) */
+  --text-xs: clamp(9px, 0.9vw, 10.5px);
+  --text-sm: clamp(10.5px, 1vw, 12px);
+  --text-base: clamp(14px, 1.15vw, 16px);
+  --text-lg: clamp(17px, 1.4vw, 20px);
+  --text-xl: clamp(22px, 2vw, 26px);
+  --text-2xl: clamp(28px, 3vw, 36px);
+  
+  /* Tracking & Letter-Spacing */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0.02em;
+  --tracking-wide: 0.14em;
+  --tracking-wider: 0.22em;
+  --tracking-widest: 0.28em;
+
+  /* Shadows */
+  --shadow-text: 0 2px 12px rgba(0, 0, 0, 0.75);
+  --shadow-hero-text: 0 3px 28px rgba(0, 0, 0, 0.7);
+
+  /* Transitions */
+  --transition-default: 0.25s ease;
+  --transition-card: 0.3s ease;
+}

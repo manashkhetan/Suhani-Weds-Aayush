@@ -1,0 +1,491 @@
+/**
+ * Typography & Sacred Inscriptions
+ * Royal Indian Wedding Calligraphy & Typesetting System
+ * 
+ * 1. English Typography System (Cormorant Garamond, DM Sans)
+ * 2. Sanskrit Sacred Calligraphy System (Gotu, Noto Serif Devanagari)
+ * 3. Hindi Typography System (Noto Serif Devanagari, Noto Sans Devanagari)
+ * 4. Universal Digits & Numerals System (Cormorant Garamond / DM Sans with lining & tabular nums)
+ */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings & Serif Display Elements */
+h1, h2, h3, h4, .mono {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: var(--tracking-normal);
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   Universal Digits & Numerals System
+   Ensures numbers (0-9) ALWAYS use royal Latin glyphs with uniform proportions
+   ========================================================================== */
+.digit-display,
+.countdown-val,
+.unit b,
+.tab-badge,
+html[lang="hi"] .tab-badge,
+.panel-watermark {
+  font-family: var(--font-digits-display) !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+}
+
+.panel-tag .digit-display,
+html[lang="hi"] .panel-tag .digit-display {
+  font-family: var(--font-digits-display) !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-weight: 700 !important;
+  display: inline-block !important;
+  margin-left: clamp(5px, 0.45em, 9px) !important;
+  margin-right: clamp(5px, 0.45em, 9px) !important;
+  letter-spacing: 0.06em;
+}
+
+.digit-sans,
+.tab-date,
+time,
+[datetime] {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+/* Monogram Logo */
+.mono {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  color: #fff;
+  transition: all var(--transition-default);
+  display: inline-flex;
+  align-items: center;
+}
+
+.mono:hover {
+  color: var(--gold-light);
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(245, 217, 157, 0.6));
+}
+
+.mono .amp {
+  transition: all 0.3s ease;
+}
+
+.mono:hover .amp {
+  color: #ffffff;
+  transform: rotate(6deg) scale(1.12);
+}
+
+.amp {
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  padding: 0 1px;
+}
+
+/* ==========================================================================
+   Sanskrit Sacred Inscriptions
+   ========================================================================== */
+.mantra {
+  font-family: var(--font-sanskrit);
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 600;
+  letter-spacing: normal !important;
+  color: var(--gold-light);
+  text-shadow: var(--shadow-text);
+  margin: 2px auto clamp(6px, 1vh, 10px);
+  transition: all var(--transition-default);
+  cursor: default;
+}
+
+.mantra:hover {
+  color: #ffffff;
+  text-shadow: 0 0 16px rgba(245, 217, 157, 0.75);
+  transform: scale(1.02);
+}
+
+.shloka {
+  font-family: var(--font-sanskrit);
+  font-size: clamp(16px, 1.9vw, 23px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal !important;
+  color: var(--gold-light);
+  text-shadow: var(--shadow-text);
+  margin: 0 auto clamp(24px, 3.5vh, 40px);
+  padding: clamp(8px, 1.2vh, 12px) clamp(18px, 2.5vw, 32px);
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+  display: block;
+  width: fit-content;
+  max-width: 700px;
+  transition: all 0.35s ease;
+  cursor: default;
+}
+
+.shloka:hover {
+  border-color: var(--gold-light);
+  background: rgba(245, 217, 157, 0.06);
+  box-shadow: 0 0 22px rgba(245, 217, 157, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Eyebrow Micro-Typography */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.2vw, 16px);
+  font-family: var(--font-sans);
+  font-size: clamp(11.5px, 1.1vw, 13.5px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin: 0 auto clamp(12px, 1.8vh, 18px);
+  width: fit-content;
+  transition: all var(--transition-default);
+}
+
+.eyebrow:before,
+.eyebrow:after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: clamp(28px, 3.5vw, 42px);
+  background: currentColor;
+  opacity: 0.85;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.eyebrow:hover:before,
+.eyebrow:hover:after {
+  width: clamp(40px, 5vw, 56px);
+  opacity: 1;
+}
+
+.eyebrow-rose {
+  color: var(--rose);
+}
+
+/* Traditional Rajasthani Motifs */
+.motif {
+  color: var(--gold-deep);
+  font-size: clamp(17px, 2vw, 22px);
+  letter-spacing: 0.38em;
+  user-select: none;
+  display: block;
+  transition: all 0.35s ease;
+}
+
+.motif:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px var(--gold-light));
+}
+
+.celebrations .motif,
+.hero .motif {
+  color: var(--gold);
+}
+
+/* Hero Couple Names */
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8.8vw, 142px);
+  font-weight: 500;
+  line-height: 0.95;
+  margin: clamp(12px, 1.6vh, 18px) 0 clamp(16px, 2.2vh, 26px);
+  color: #fff4dc;
+  text-shadow: var(--shadow-hero-text);
+  letter-spacing: 0;
+  transition: all 0.35s ease;
+}
+
+.hero h1:hover {
+  text-shadow: 0 4px 35px rgba(245, 217, 157, 0.45);
+}
+
+.hero .date {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.6vw, 32px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: var(--shadow-text);
+  transition: color var(--transition-default);
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.hero .date:hover {
+  color: var(--gold-light);
+}
+
+.hero .place {
+  font-family: var(--font-sans);
+  font-size: clamp(12px, 1.15vw, 14.5px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: clamp(10px, 1.4vh, 14px) 0 clamp(18px, 2.5vh, 26px);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  transition: all var(--transition-default);
+}
+
+.hero .place:hover {
+  color: var(--gold-light);
+  letter-spacing: 0.26em;
+}
+
+/* Section Headings */
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 76px);
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--wine);
+  margin: 14px 0 0;
+  letter-spacing: var(--tracking-normal);
+  transition: color var(--transition-default);
+}
+
+.lead {
+  max-width: 720px;
+  margin: clamp(18px, 2.5vh, 26px) auto 0;
+  line-height: 1.9;
+  color: var(--ink-muted);
+  font-size: clamp(15px, 1.35vw, 17.5px);
+  font-weight: 400;
+}
+
+.celebrations .title {
+  color: #fff5dd;
+}
+
+.celebrations .lead {
+  color: #f5d8c1;
+}
+
+/* ==========================================================================
+   Hindi (India) Typography System (हिन्दी टाइपोग्राफी)
+   Refined Royal Devanagari typesetting with Noto Serif Devanagari & Noto Sans
+   ========================================================================== */
+
+html[lang="hi"] {
+  --font-display: var(--font-hi-display);
+  --font-serif: var(--font-hi-serif);
+  --font-sans: var(--font-hi-sans);
+}
+
+/* Universal Devanagari Shirorekha Integrity Protection:
+   Connected Indic scripts MUST NEVER have positive letter-spacing */
+html[lang="hi"],
+html[lang="hi"] * {
+  letter-spacing: normal !important;
+}
+
+html[lang="hi"] body {
+  font-family: var(--font-hi-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="hi"] h4,
+html[lang="hi"] .title,
+html[lang="hi"] .hero h1,
+html[lang="hi"] .panel-title,
+html[lang="hi"] .lang-modal-title {
+  font-family: var(--font-hi-display);
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+html[lang="hi"] .hero h1 {
+  font-size: clamp(52px, 8.5vw, 138px);
+  line-height: 1.18;
+  font-weight: 600;
+  text-shadow: var(--shadow-hero-text);
+  letter-spacing: normal !important;
+}
+
+html[lang="hi"] .hero .date {
+  font-family: var(--font-hi-display);
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: normal !important;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[lang="hi"] .hero .place,
+html[lang="hi"] .hero .place:hover {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(14px, 1.35vw, 17.5px);
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: none;
+  letter-spacing: normal !important;
+}
+
+html[lang="hi"] .title {
+  font-size: clamp(36px, 5vw, 74px);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+html[lang="hi"] #invitation-heading {
+  font-size: clamp(34px, 4.8vw, 70px);
+  line-height: 1.25;
+}
+
+html[lang="hi"] .lead {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(16px, 1.45vw, 19px);
+  line-height: 2.0;
+  font-weight: 400;
+}
+
+html[lang="hi"] .eyebrow {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(14px, 1.3vw, 16.5px);
+  font-weight: 600;
+  text-transform: none;
+}
+
+html[lang="hi"] .panel-tag {
+  font-family: var(--font-hi-sans);
+  font-weight: 600;
+  font-size: clamp(13px, 1.2vw, 15px);
+  text-transform: none;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+html[lang="hi"] .panel-title {
+  font-size: clamp(30px, 3.8vw, 44px);
+  line-height: 1.26;
+  font-weight: 600;
+}
+
+html[lang="hi"] .panel-subtitle {
+  font-family: var(--font-hi-sans);
+  font-style: normal;
+  font-size: clamp(16px, 1.5vw, 19.5px);
+  line-height: 1.6;
+  font-weight: 500;
+  color: #ffd8bf;
+}
+
+html[lang="hi"] .panel-desc {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(14.5px, 1.3vw, 16.5px);
+  line-height: 1.95;
+  font-weight: 400;
+}
+
+html[lang="hi"] .tab-name {
+  font-family: var(--font-hi-display);
+  font-size: clamp(15px, 1.45vw, 18.5px);
+  font-weight: 600;
+}
+
+/* Explicit Digits Preservation in Hindi Mode */
+html[lang="hi"] .tab-badge,
+html[lang="hi"] .panel-watermark,
+html[lang="hi"] .countdown-val,
+html[lang="hi"] .unit b {
+  font-family: var(--font-digits-display) !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  letter-spacing: 0.04em !important;
+}
+
+html[lang="hi"] .tab-date {
+  font-family: var(--font-digits-sans);
+  font-size: clamp(10px, 0.95vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[lang="hi"] .meta-label {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(11.5px, 1vw, 13px);
+  font-weight: 600;
+  text-transform: none;
+}
+
+html[lang="hi"] .meta-value {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(14.5px, 1.35vw, 16.5px);
+  line-height: 1.55;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[lang="hi"] .button {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(13.5px, 1.25vw, 15.5px);
+  font-weight: 600;
+  padding: clamp(12px, 1.4vh, 16px) clamp(22px, 2.2vw, 32px);
+}
+
+html[lang="hi"] .festivity-btn {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 600;
+  padding: clamp(11px, 1.3vh, 14px) clamp(20px, 2.2vw, 28px);
+}
+
+html[lang="hi"] .unit span {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(12px, 1.1vw, 13.5px);
+  font-weight: 600;
+  text-transform: none;
+}
+
+html[lang="hi"] .links a {
+  font-family: var(--font-hi-sans);
+  font-weight: 600;
+  font-size: clamp(13.5px, 1.2vw, 15px);
+}
+
+html[lang="hi"] .footer p {
+  font-family: var(--font-hi-display);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+}
+
+html[lang="hi"] .footer small {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(15px, 1.35vw, 17.5px);
+  font-weight: 500;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[lang="hi"] .patrika-badge {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(13px, 1.3vw, 15px);
+  font-weight: 600;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+

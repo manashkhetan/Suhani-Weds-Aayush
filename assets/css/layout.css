@@ -1,0 +1,274 @@
+/**
+ * Layout & Page Structure
+ * Grid systems, sections, and royal palace framing
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+::selection {
+  background: var(--wine);
+  color: var(--gold-light);
+}
+
+::-moz-selection {
+  background: var(--wine);
+  color: var(--gold-light);
+}
+
+/* Custom Royal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--wine-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-deep);
+  border-radius: 4px;
+  border: 1px solid rgba(245, 217, 157, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Skip Navigation */
+.skip {
+  position: absolute;
+  left: -999px;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip:focus {
+  left: 14px;
+  top: 14px;
+  background: #fff;
+  color: var(--wine);
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Header & Nav */
+.nav {
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px clamp(20px, 6vw, 82px);
+  color: #fff;
+  transition: padding 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, box-shadow 0.35s ease, border-bottom 0.35s ease;
+}
+
+.nav.scrolled {
+  padding: 14px clamp(20px, 6vw, 82px);
+  background: rgba(33, 4, 14, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--gold-border-subtle);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 32px);
+}
+
+.links {
+  display: flex;
+  gap: clamp(14px, 2.5vw, 28px);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.links a {
+  position: relative;
+  padding: 6px 2px;
+  color: #fff;
+  transition: color var(--transition-default), transform var(--transition-default);
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.links a:hover,
+.links a.active {
+  color: var(--gold-light);
+}
+
+.links a:hover::after,
+.links a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 750px;
+  height: 100svh;
+  height: 100vh;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background: var(--wine);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: 
+    linear-gradient(90deg, rgba(33, 4, 14, 0.8) 0%, rgba(74, 19, 37, 0.17) 50%, rgba(33, 4, 14, 0.8) 100%),
+    url("../images/jaipur-wedding-hero.png") center/cover no-repeat;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: -1;
+  border: 1px solid rgba(245, 217, 157, 0.44);
+  pointer-events: none;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 920px;
+  width: 100%;
+  padding: clamp(56px, 7.5vh, 80px) 20px 38px;
+  animation: rise 0.9s ease-out both;
+  z-index: 2;
+  gap: clamp(32px, 4.8vh, 52px);
+}
+
+.hero-invocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Standard Section Container */
+.section {
+  padding: clamp(75px, 10vw, 135px) clamp(20px, 7vw, 105px);
+  text-align: center;
+  position: relative;
+}
+
+.intro {
+  background: linear-gradient(135deg, #fffaf1, #f4e5cb);
+  border-top: 1px solid var(--gold-border-subtle);
+  border-bottom: 1px solid var(--gold-border-subtle);
+}
+
+.celebrations {
+  background: var(--wine);
+  color: #fff;
+}
+
+.countdown {
+  background: var(--sand);
+}
+
+
+
+/* Footer */
+.footer {
+  background: #260817;
+  color: #f5dba4;
+  text-align: center;
+  padding: 60px 20px 36px;
+  border-top: 1px solid var(--gold-border-subtle);
+  position: relative;
+}
+
+.footer .mono {
+  font-size: 47px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer .mono:hover {
+  transform: translateY(-3px) scale(1.06);
+  filter: drop-shadow(0 0 16px rgba(245, 217, 157, 0.6));
+}
+
+.footer p {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 6px 0 8px;
+}
+
+.footer small {
+  color: #c89663;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}

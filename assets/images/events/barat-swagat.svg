@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="horseWhite" x1="20" y1="20" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FFF8E1"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+    <linearGradient id="saffronGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="40%" stop-color="#FF9800"/>
+      <stop offset="85%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+    <linearGradient id="royalRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <filter id="baratGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Saffron Glow -->
+  <circle cx="40" cy="40" r="32" fill="#FF9800" opacity="0.15" filter="url(#baratGlow)"/>
+
+  <!-- Royal Horse (Ghodi Profile) -->
+  <g transform="translate(4, 0)">
+    <!-- Horse Neck & Head Silhouette -->
+    <path d="M48 64 C48 50 44 38 40 32 L48 20 C48 20 46 16 38 18 C32 19 24 24 20 32 C18 36 17 44 22 46 C26 47 30 40 32 38 C32 44 36 60 38 64 Z" fill="url(#horseWhite)"/>
+    <path d="M22 46 C21 44 20 42 22 40 C24 38 27 40 27 42 C27 45 23 47 22 46 Z" fill="#FFAB91"/>
+    
+    <!-- Horse Ear -->
+    <path d="M38 18 L39 10 L44 16 Z" fill="url(#horseWhite)"/>
+    <path d="M39 16 L40 12 L43 15 Z" fill="#FFCCBC"/>
+
+    <!-- Royal Kalgi / Feather Plume on Forehead -->
+    <path d="M38 14 C40 6 46 4 48 4 C48 8 44 12 40 14 Z" fill="url(#royalRed)"/>
+    <path d="M42 14 C46 7 52 7 54 8 C52 11 48 13 44 15 Z" fill="url(#saffronGold)"/>
+    <circle cx="39" cy="15" r="2" fill="#FFD54F"/>
+
+    <!-- Flowing Royal Mane (Crimson & Gold Braids) -->
+    <path d="M42 20 C46 22 48 26 47 30 C49 32 51 36 49 40 C52 42 53 48 50 54" stroke="url(#saffronGold)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Royal Harness & Headstall (Gota Patti Bridle) -->
+    <path d="M22 42 L34 36 L40 22" stroke="url(#royalRed)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M34 36 L38 48" stroke="url(#royalRed)" stroke-width="2"/>
+    <circle cx="34" cy="36" r="3" fill="#FFD54F" stroke="#B71C1C" stroke-width="1"/>
+    <circle cx="27" cy="39" r="1.5" fill="#FFE082"/>
+
+    <!-- Embroidered Royal Saddle Cloth (Jhool) with Tassels -->
+    <path d="M35 52 C45 50 56 50 64 54 L62 66 C52 64 42 64 35 64 Z" fill="url(#royalRed)"/>
+    <path d="M36 54 C45 52 54 52 62 56" stroke="#FFD54F" stroke-width="1.5"/>
+    <!-- Tassels -->
+    <circle cx="38" cy="67" r="1.5" fill="#FFD54F"/>
+    <circle cx="44" cy="67" r="1.5" fill="#FFD54F"/>
+    <circle cx="50" cy="67" r="1.5" fill="#FFD54F"/>
+    <circle cx="56" cy="67" r="1.5" fill="#FFD54F"/>
+    <circle cx="61" cy="67" r="1.5" fill="#FFD54F"/>
+  </g>
+
+  <!-- Sparkles -->
+  <path d="M14 20 L15.5 16 L17 20 L21 21.5 L17 23 L15.5 27 L14 23 L10 21.5 Z" fill="#FFE082" opacity="0.9"/>
+  <path d="M66 22 L67.5 18 L69 22 L73 23.5 L69 25 L67.5 29 L66 25 L62 23.5 Z" fill="#FFE082" opacity="0.9"/>
+</svg>

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Skin Tone / Henna Background Gradient -->
+    <linearGradient id="handSkin" x1="20" y1="20" x2="60" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE0B2"/>
+      <stop offset="60%" stop-color="#FFCC80"/>
+      <stop offset="100%" stop-color="#FFA726"/>
+    </linearGradient>
+
+    <!-- Dark Henna Maroon-Brown Gradient -->
+    <linearGradient id="hennaDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5D4037"/>
+      <stop offset="50%" stop-color="#4E342E"/>
+      <stop offset="100%" stop-color="#2D1500"/>
+    </linearGradient>
+
+    <!-- Green Mehndi Cone Gradient -->
+    <linearGradient id="coneGreen" x1="20" y1="10" x2="60" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#81C784"/>
+      <stop offset="35%" stop-color="#43A047"/>
+      <stop offset="75%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+
+    <!-- Gold Foil & Bangles Gradient -->
+    <linearGradient id="goldFoil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="35%" stop-color="#FFD54F"/>
+      <stop offset="75%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+
+    <!-- Emerald Aura Filter -->
+    <filter id="mehendiGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Emerald Green Halo -->
+  <circle cx="40" cy="40" r="32" fill="#4CAF50" opacity="0.14" filter="url(#mehendiGlow)"/>
+
+  <!-- Bridal Palm Outline with Mehndi Art -->
+  <!-- Wrist Base with Royal Gold Bangles (Kangan & Chuda) -->
+  <g transform="translate(0, 0)">
+    <!-- Wrist -->
+    <path d="M30 58 L30 72 C30 74 50 74 50 72 L50 58 Z" fill="url(#handSkin)"/>
+    <!-- Red Bridal Chuda Bangle -->
+    <rect x="28" y="68" width="24" height="3" rx="1.5" fill="#D32F2F"/>
+    <!-- Gold Kangan with Gems -->
+    <rect x="27" y="63" width="26" height="3.5" rx="1.7" fill="url(#goldFoil)"/>
+    <circle cx="34" cy="64.7" r="0.8" fill="#D32F2F"/>
+    <circle cx="40" cy="64.7" r="0.8" fill="#4CAF50"/>
+    <circle cx="46" cy="64.7" r="0.8" fill="#D32F2F"/>
+    <!-- Green Glass Bangle -->
+    <rect x="28.5" y="59" width="23" height="2.5" rx="1.2" fill="#2E7D32"/>
+
+    <!-- Palm -->
+    <path d="M26 44 C25 52 30 58 40 58 C50 58 55 52 54 44 C54 36 50 34 40 34 C30 34 26 36 26 44 Z" fill="url(#handSkin)"/>
+
+    <!-- Thumb (Left) -->
+    <path d="M26 48 C20 44 18 38 22 35 C25 33 28 37 28 42 Z" fill="url(#handSkin)"/>
+    <!-- Thumb Mehndi Tip -->
+    <path d="M19.5 37 C21 34 23 34 24 35.5 C22.5 37 20.5 38.5 19.5 37 Z" fill="url(#hennaDark)"/>
+
+    <!-- Index Finger -->
+    <path d="M28 36 C27 26 31 22 34 23 C36 24 35 32 34 36 Z" fill="url(#handSkin)"/>
+    <path d="M30 25 C31 22.5 33.5 22.5 34 24.5 C33 26 31 27 30 25 Z" fill="url(#hennaDark)"/>
+
+    <!-- Middle Finger -->
+    <path d="M35 34 C35 22 39 18 42 19 C44 20 43 30 42 34 Z" fill="url(#handSkin)"/>
+    <path d="M38 21 C39 18.5 41.5 18.5 42 20.5 C41 22 39 23 38 21 Z" fill="url(#hennaDark)"/>
+
+    <!-- Ring Finger with Gold Ring -->
+    <path d="M43 35 C43 24 47 21 50 22 C52 23 50 31 49 35 Z" fill="url(#handSkin)"/>
+    <path d="M46 23.5 C47 21.5 49.5 21.5 50 23.5 C49 25 47 25.5 46 23.5 Z" fill="url(#hennaDark)"/>
+    <!-- Gold Ring -->
+    <ellipse cx="47" cy="29" rx="3.5" ry="1.2" fill="url(#goldFoil)"/>
+    <circle cx="47" cy="28.5" r="1" fill="#00E5FF"/>
+
+    <!-- Little Finger -->
+    <path d="M50 38 C53 30 57 28 59 31 C60 33 56 40 54 42 Z" fill="url(#handSkin)"/>
+    <path d="M55.5 30.5 C57 28.5 59 29.5 59 32 C57.5 33 56 32 55.5 30.5 Z" fill="url(#hennaDark)"/>
+  </g>
+
+  <!-- Intricate Henna Mandala Pattern on Palm -->
+  <!-- Outer Mandala Petals -->
+  <g transform="translate(40, 46)">
+    <circle cx="0" cy="0" r="8" stroke="url(#hennaDark)" stroke-width="1" fill="none" stroke-dasharray="1.5,1.5"/>
+    <circle cx="0" cy="0" r="6" fill="#3E2723"/>
+    <circle cx="0" cy="0" r="3" fill="url(#goldFoil)"/>
+    <circle cx="0" cy="0" r="1.2" fill="#3E2723"/>
+    <!-- 8 Directional Mandala Dots -->
+    <circle cx="0" cy="-7" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="5" cy="-5" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="7" cy="0" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="5" cy="5" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="0" cy="7" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="-5" cy="5" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="-7" cy="0" r="0.9" fill="url(#goldFoil)"/>
+    <circle cx="-5" cy="-5" r="0.9" fill="url(#goldFoil)"/>
+  </g>
+
+  <!-- Traditional Henna Cone (Applying Mehendi) -->
+  <g transform="rotate(38, 56, 24)">
+    <!-- Cone Body -->
+    <polygon points="56,6 64,10 57,38" fill="url(#coneGreen)"/>
+    <!-- Cone Foil Wrapper Pattern -->
+    <polygon points="56,6 64,10 61,18 56.5,16" fill="url(#goldFoil)"/>
+    <!-- Gold Ribbon Wrap on Cone -->
+    <path d="M57 24 L60 26" stroke="url(#goldFoil)" stroke-width="1.5"/>
+    <!-- Cone Tip (Dispensing Henna) -->
+    <circle cx="57" cy="38" r="1" fill="#2E7D32"/>
+    <!-- Flowing Henna Trail to Hand -->
+    <path d="M57 38 Q58 44 54 48" stroke="url(#hennaDark)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Fragrant Jasmine / Mogra Buds -->
+  <!-- Jasmine 1 (Top Left) -->
+  <g transform="translate(14, 18) scale(0.6)">
+    <path d="M10 6 C8 12 12 16 12 16 C12 16 16 12 14 6 C12 2 10 2 10 6 Z" fill="#FFFFFF"/>
+    <path d="M6 10 C10 10 12 16 12 16 C12 16 14 10 18 10 C14 8 8 8 6 10 Z" fill="#F1F8E9"/>
+    <circle cx="12" cy="14" r="2" fill="#81C784"/>
+  </g>
+
+  <!-- Jasmine 2 (Bottom Right) -->
+  <g transform="translate(56, 52) scale(0.55)">
+    <path d="M10 6 C8 12 12 16 12 16 C12 16 16 12 14 6 C12 2 10 2 10 6 Z" fill="#FFFFFF"/>
+    <circle cx="12" cy="14" r="2" fill="#81C784"/>
+  </g>
+
+  <!-- Festive Sparkles -->
+  <path d="M18 52 L19.5 48 L21 52 L25 53.5 L21 55 L19.5 59 L18 55 L14 53.5 Z" fill="#C8E6C9" opacity="0.9"/>
+  <path d="M64 16 L65 13 L66 16 L69 17 L66 18 L65 21 L64 18 L61 17 Z" fill="#FFF9C4" opacity="0.9"/>
+</svg>

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Brass Urli Metallic Gradients -->
+    <linearGradient id="urliGold" x1="12" y1="36" x2="68" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF59D"/>
+      <stop offset="25%" stop-color="#FFD54F"/>
+      <stop offset="55%" stop-color="#FFB300"/>
+      <stop offset="85%" stop-color="#FF8F00"/>
+      <stop offset="100%" stop-color="#C47E00"/>
+    </linearGradient>
+    <linearGradient id="urliRim" x1="10" y1="40" x2="70" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#FFF9C4"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+
+    <!-- Golden Turmeric Paste Gradient -->
+    <linearGradient id="haldiPaste" x1="20" y1="38" x2="60" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="30%" stop-color="#FFEE58"/>
+      <stop offset="70%" stop-color="#FDD835"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+
+    <!-- Marigold Orange-Yellow Gradient -->
+    <linearGradient id="marigoldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFEE58"/>
+      <stop offset="45%" stop-color="#FF9800"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+
+    <!-- Turmeric Root Stick Gradient -->
+    <linearGradient id="turmericRoot" x1="0" y1="0" x2="1" y2="0.8">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#B26A00"/>
+    </linearGradient>
+
+    <!-- Soft Ambient Glow Filter -->
+    <filter id="haldiGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Golden Glow -->
+  <circle cx="40" cy="42" r="32" fill="#FFC107" opacity="0.14" filter="url(#haldiGlow)"/>
+
+  <!-- Ornate Brass Urli Base Stand -->
+  <ellipse cx="40" cy="67" rx="16" ry="4" fill="#8D5B00"/>
+  <ellipse cx="40" cy="66" rx="15" ry="3" fill="url(#urliGold)"/>
+
+  <!-- Main Brass Urli Pot Body -->
+  <path d="M14 44 C14 62 25 66 40 66 C55 66 66 62 66 44 Z" fill="url(#urliGold)"/>
+  
+  <!-- Urli Carved Base Band -->
+  <path d="M20 54 C28 60 52 60 60 54" stroke="#FFE082" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="40" cy="58" r="1.5" fill="#FFF59D"/>
+  <circle cx="34" cy="57" r="1.2" fill="#FFF59D"/>
+  <circle cx="46" cy="57" r="1.2" fill="#FFF59D"/>
+
+  <!-- Urli Side Handles (Traditional Royal Kunda) -->
+  <path d="M14 44 C8 44 8 52 14 54" stroke="url(#urliGold)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M66 44 C72 44 72 52 66 54" stroke="url(#urliGold)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Urli Rim -->
+  <ellipse cx="40" cy="44" rx="26" ry="8.5" fill="#D48800"/>
+  <ellipse cx="40" cy="43.5" rx="25" ry="7.5" fill="url(#urliRim)"/>
+
+  <!-- Turmeric Paste Basin -->
+  <ellipse cx="40" cy="44" rx="22.5" ry="6" fill="url(#haldiPaste)"/>
+
+  <!-- Swirl of Fresh Turmeric Paste -->
+  <path d="M30 43 C34 40 46 40 50 43 C46 46 34 46 30 43 Z" fill="#FFFDE7" opacity="0.65"/>
+  <ellipse cx="40" cy="43.5" rx="4" ry="1.5" fill="#FFFDE7"/>
+
+  <!-- Whole Turmeric Root (Haldi ki Ganth) leaning on left -->
+  <g transform="rotate(-32, 22, 34)">
+    <rect x="18" y="24" width="7" height="18" rx="3.5" fill="url(#turmericRoot)"/>
+    <path d="M19 28 L24 28 M19 33 L24 33 M19 37 L23 37" stroke="#7E4B00" stroke-width="1" stroke-linecap="round"/>
+    <!-- Sacred Red Mauli Thread on Haldi -->
+    <rect x="17.5" y="30" width="8" height="2" rx="0.8" fill="#D32F2F"/>
+  </g>
+
+  <!-- Left Layered Marigold Flower -->
+  <g transform="translate(18, 33) scale(0.68)">
+    <circle cx="12" cy="12" r="10" fill="url(#marigoldGrad)"/>
+    <!-- Petals Ring 1 -->
+    <path d="M12 2 C10 7 7 10 2 12 C7 14 10 17 12 22 C14 17 17 14 22 12 C17 10 14 7 12 2 Z" fill="#FFD54F"/>
+    <!-- Petals Ring 2 (Rotated) -->
+    <path d="M5 5 C8 9 10 12 12 19 C14 12 16 9 19 5 C15 7 12 10 5 5 Z" fill="#FFA000"/>
+    <circle cx="12" cy="12" r="4.5" fill="#FFE082"/>
+    <circle cx="12" cy="12" r="2.5" fill="#E65100"/>
+  </g>
+
+  <!-- Right Layered Marigold Flower -->
+  <g transform="translate(48, 33) scale(0.68)">
+    <circle cx="12" cy="12" r="10" fill="url(#marigoldGrad)"/>
+    <path d="M12 2 C10 7 7 10 2 12 C7 14 10 17 12 22 C14 17 17 14 22 12 C17 10 14 7 12 2 Z" fill="#FFD54F"/>
+    <circle cx="12" cy="12" r="4.5" fill="#FFE082"/>
+    <circle cx="12" cy="12" r="2.5" fill="#E65100"/>
+  </g>
+
+  <!-- Center Floating Lotus / Jasmine Petals -->
+  <path d="M37 42 C37 40 40 37 40 37 C40 37 43 40 43 42 C43 44 37 44 37 42 Z" fill="#E91E63" opacity="0.9"/>
+  <circle cx="33" cy="44" r="1.5" fill="#FFFDE7"/>
+  <circle cx="47" cy="44" r="1.5" fill="#FFFDE7"/>
+
+  <!-- Divine Auspicious Droplet / Tilak Mark -->
+  <path d="M40 13 C40 13 34 22 34 26 C34 29.3 36.7 32 40 32 C43.3 32 46 29.3 46 26 C46 22 40 13 40 13 Z" fill="url(#haldiPaste)"/>
+  <circle cx="40" cy="25" r="3" fill="#FFFDE7" opacity="0.8"/>
+  <!-- Red Kumkum center in tilak -->
+  <circle cx="40" cy="26" r="1.2" fill="#D32F2F"/>
+
+  <!-- Radiant Sparkles -->
+  <path d="M24 16 L25.5 12 L27 16 L31 17.5 L27 19 L25.5 23 L24 19 L20 17.5 Z" fill="#FFF9C4" opacity="0.9"/>
+  <path d="M58 14 L59 11 L60 14 L63 15 L60 16 L59 19 L58 16 L55 15 Z" fill="#FFF9C4" opacity="0.9"/>
+</svg>
