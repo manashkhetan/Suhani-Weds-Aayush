@@ -275,27 +275,24 @@ a {
 
 /* Rajasthani Folk Music */
 .music-player {
-  display: grid;
-  justify-items: center;
-  gap: 9px;
-  margin: 22px auto 18px;
+  position: fixed;
+  z-index: 110;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 28px);
 }
 
 .music-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  min-height: 42px;
-  padding: 10px 17px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
   border: 1px solid rgba(245, 219, 164, 0.46);
   border-radius: 999px;
   background: rgba(245, 219, 164, 0.06);
   color: #f5dba4;
   font: inherit;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   cursor: pointer;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -316,37 +313,29 @@ a {
 .music-toggle-icon {
   display: inline-grid;
   place-items: center;
-  width: 19px;
-  height: 19px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #f5dba4;
   color: #260817;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .music-toggle.is-playing .music-toggle-icon {
   animation: folk-pulse 1.2s ease-in-out infinite;
-}
-
-.music-credit {
-  max-width: 360px;
-  margin: 0;
-  color: #c89663;
-  font-size: 9px;
-  letter-spacing: 0.03em;
-  line-height: 1.55;
-}
-
-.music-credit a {
-  color: inherit;
-  text-decoration-color: rgba(200, 150, 99, 0.65);
-  text-underline-offset: 3px;
-}
-
-.music-credit a:hover,
-.music-credit a:focus-visible {
-  color: #f5dba4;
 }
 
 @keyframes folk-pulse {

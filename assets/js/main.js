@@ -123,8 +123,8 @@
         ctrl_prev: '<span aria-hidden="true">←</span> Previous',
         ctrl_next: 'Next <span aria-hidden="true">→</span>',
         footer_names: 'Suhani Khetan · Aayush Agarwal',
-        music_play: 'Play Rajasthani folk music',
-        music_pause: 'Pause Rajasthani folk music',
+        music_on: 'Turn wedding music on',
+        music_off: 'Turn wedding music off',
         footer_place: '12 December 2026 · Jhunjhunu, Rajasthan'
       },
       hi: {
@@ -236,8 +236,8 @@
         ctrl_prev: '<span aria-hidden="true">←</span> पिछला उत्सव',
         ctrl_next: 'अगला उत्सव <span aria-hidden="true">→</span>',
         footer_names: 'सुहानी खेतान · आयुष अग्रवाल',
-        music_play: 'राजस्थानी लोक संगीत चलाएँ',
-        music_pause: 'राजस्थानी लोक संगीत रोकें',
+        music_on: 'विवाह संगीत चलाएँ',
+        music_off: 'विवाह संगीत बंद करें',
         footer_place: '12 दिसंबर 2026 · झुंझुनू, राजस्थान'
       }
     },
@@ -263,12 +263,7 @@
         }
       });
 
-      const musicLabel = document.getElementById('music-toggle-label');
-      const folkAudio = document.getElementById('folk-audio');
-      if (musicLabel && folkAudio && !folkAudio.paused && !folkAudio.ended) {
-        musicLabel.textContent = dict.music_pause;
-        musicLabel.setAttribute('data-i18n', 'music_pause');
-      }
+      window.dispatchEvent(new CustomEvent('wedding-language-changed'));
     },
 
     toggleLanguage: function () {
@@ -296,6 +291,7 @@
       btn.addEventListener('click', function () {
         const chosenLang = this.getAttribute('data-lang');
         WeddingI18n.applyLanguage(chosenLang);
+        window.WeddingMusic?.enableSound();
         closeModal();
       });
     });
@@ -581,17 +577,25 @@
     const syncState = () => {
       const isPlaying = !audio.paused && !audio.ended;
       const dictionary = WeddingI18n.translations[WeddingI18n.currentLang];
-      button.classList.toggle('is-playing', isPlaying);
-      button.setAttribute('aria-pressed', String(isPlaying));
-      label.textContent = isPlaying ? dictionary.music_pause : dictionary.music_play;
-      label.setAttribute('data-i18n', isPlaying ? 'music_pause' : 'music_play');
+      const hasSound = isPlaying && !audio.muted;
+      button.classList.toggle('is-playing', hasSound);
+      button.setAttribute('aria-pressed', String(hasSound));
+      button.setAttribute('aria-label', hasSound ? dictionary.music_off : dictionary.music_on);
+      label.textContent = hasSound ? dictionary.music_off : dictionary.music_on;
+      label.setAttribute('data-i18n', hasSound ? 'music_off' : 'music_on');
     };
 
+    const enableSound = () => {
+      audio.muted = false;
+      audio.play().catch(() => {});
+      syncState();
+    };
+
+    window.WeddingMusic = { enableSound };
+
     button.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play().catch(() => {
-          label.textContent = 'Music could not be played. Please try again.';
-        });
+      if (audio.paused || audio.muted) {
+        enableSound();
       } else {
         audio.pause();
       }
@@ -600,26 +604,34 @@
     audio.addEventListener('play', syncState);
     audio.addEventListener('pause', syncState);
     audio.addEventListener('ended', syncState);
+    audio.addEventListener('volumechange', syncState);
+    window.addEventListener('wedding-language-changed', syncState);
+
+    // Browsers permit this muted autoplay attempt. A first interaction enables sound.
+    audio.play().then(syncState).catch(syncState);
+    document.addEventListener('pointerdown', enableSound, { once: true });
+    document.addEventListener('keydown', enableSound, { once: true });
+    syncState();
   }
 
   function initApp() {
-    // 1. Initialize Bilingual Support & Modal
+    // 1. Start background music before showing the language selection screen.
+    initFolkMusic();
+
+    // 2. Initialize Bilingual Support & Modal
     initLanguageModal();
     initLanguageToggle();
 
-    // 2. Initialize Real-Time Countdown for 12 December 2026, 4:00 PM IST
+    // 3. Initialize Real-Time Countdown for 12 December 2026, 4:00 PM IST
     if (window.WeddingCountdown && typeof window.WeddingCountdown.init === 'function') {
       window.WeddingCountdown.init('2026-12-12T16:00:00+05:30');
     }
 
-    // 3. Initialize Enhanced Smooth Scrolling for in-page anchors
+    // 4. Initialize Enhanced Smooth Scrolling for in-page anchors
     initSmoothScroll();
 
-    // 4. Initialize Interactive Wedding Festivities Tabs & Showcase
+    // 5. Initialize Interactive Wedding Festivities Tabs & Showcase
     initFestivityTabs();
-
-    // 5. Initialize the optional Rajasthani folk music player
-    initFolkMusic();
 
     // 6. Initialize Sticky Frosted Navigation
     initStickyNav();

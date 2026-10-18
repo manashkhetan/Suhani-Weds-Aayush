@@ -45,11 +45,11 @@
   <link rel="preload" as="image" href="assets/images/ganesh-idol-emblem.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=20261018-folk-music">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261018-background-music">
 
   <!-- Universal Scripts -->
   <script src="assets/js/countdown.js" defer></script>
-  <script src="assets/js/main.js?v=20261018-folk-music" defer></script>
+  <script src="assets/js/main.js?v=20261018-background-music" defer></script>
 
   <!-- Schema.org JSON-LD Structured Data for Supreme SEO -->
   <script type="application/ld+json">
@@ -744,15 +744,14 @@
   <footer class="footer">
     <a class="mono reveal" href="#top" aria-label="Back to top">S<span class="amp">&amp;</span>A</a>
     <p class="reveal reveal-delay-1" data-i18n="footer_names">Suhani Khetan · Aayush Agarwal</p>
-    <div class="music-player reveal reveal-delay-2" aria-label="Rajasthani folk music">
-      <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false">
+    <div class="music-player" aria-label="Background music controls">
+      <button class="music-toggle" id="music-toggle" type="button" aria-pressed="false" aria-label="Turn wedding music on or off">
         <span class="music-toggle-icon" aria-hidden="true">♫</span>
-        <span id="music-toggle-label" data-i18n="music_play">Play Rajasthani folk music</span>
+        <span id="music-toggle-label" class="sr-only" data-i18n="music_on">Turn wedding music on</span>
       </button>
-      <audio id="folk-audio" preload="none">
-        <source src="https://commons.wikimedia.org/wiki/Special:FilePath/Rajasthani_Dance_Performance_at_Khajuraho_2026_-_Part_1.ogg" type="audio/ogg">
+      <audio id="folk-audio" autoplay loop muted preload="auto" playsinline>
+        <source src="assets/audio/wedding-background-music.mp3" type="audio/mpeg">
       </audio>
-      <p class="music-credit">Rajasthani folk performance by <a href="https://commons.wikimedia.org/wiki/File:Rajasthani_Dance_Performance_at_Khajuraho_2026_-_Part_1.ogg" target="_blank" rel="noopener noreferrer">Sachin Patel 78</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p>
     </div>
     <small class="reveal reveal-delay-2" data-i18n="footer_place">12 December 2026 · Jhunjhunu, Rajasthan</small>
   </footer>
