@@ -34,6 +34,9 @@
   }
 
   .hero .place {
+    max-width: calc(100% - 24px);
+    padding: 8px 12px;
+    letter-spacing: 0.12em;
     margin-bottom: clamp(14px, 2vh, 20px);
   }
 

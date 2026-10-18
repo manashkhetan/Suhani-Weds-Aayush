@@ -272,20 +272,27 @@ time,
 }
 
 .hero .place {
+  display: block;
+  max-width: calc(100% - 32px);
+  padding: 8px clamp(12px, 1.8vw, 20px);
+  border: 1px solid rgba(245, 217, 157, 0.36);
+  background: rgba(22, 3, 11, 0.58);
   font-family: var(--font-sans);
   font-size: clamp(12px, 1.15vw, 14.5px);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: var(--tracking-wider);
+  line-height: 1.45;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFFFFF;
   margin: clamp(10px, 1.4vh, 14px) 0 clamp(18px, 2.5vh, 26px);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
   transition: all var(--transition-default);
 }
 
 .hero .place:hover {
-  color: var(--gold-light);
-  letter-spacing: 0.26em;
+  color: #FFFFFF;
+  background: rgba(22, 3, 11, 0.7);
+  letter-spacing: var(--tracking-wider);
 }
 
 /* Section Headings */
