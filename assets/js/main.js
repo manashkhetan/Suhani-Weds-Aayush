@@ -376,6 +376,30 @@
   /* ==========================================================================
      Interactive UI Modules
      ========================================================================== */
+  function initInitialScrollPosition() {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // Preserve deliberate deep links, but always start a plain site URL at the hero.
+    if (window.location.hash) return;
+
+    const scrollToTop = () => {
+      const root = document.documentElement;
+      const previousBehavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = previousBehavior;
+    };
+
+    scrollToTop();
+    requestAnimationFrame(scrollToTop);
+    window.addEventListener('load', scrollToTop, { once: true });
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted && !window.location.hash) scrollToTop();
+    });
+  }
+
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
@@ -665,31 +689,34 @@
   }
 
   function initApp() {
-    // 1. Start background music before showing the language selection screen.
+    // 1. A direct visit without an anchor always begins at the top of the invitation.
+    initInitialScrollPosition();
+
+    // 2. Start background music before showing the language selection screen.
     initFolkMusic();
 
-    // 2. Initialize Bilingual Support & Modal
+    // 3. Initialize Bilingual Support & Modal
     initLanguageModal();
     initLanguageToggle();
 
-    // 3. Initialize Real-Time Countdown for 12 December 2026, 4:00 PM IST
+    // 4. Initialize Real-Time Countdown for 12 December 2026, 4:00 PM IST
     if (window.WeddingCountdown && typeof window.WeddingCountdown.init === 'function') {
       window.WeddingCountdown.init('2026-12-12T16:00:00+05:30');
     }
 
-    // 4. Initialize Enhanced Smooth Scrolling for in-page anchors
+    // 5. Initialize Enhanced Smooth Scrolling for in-page anchors
     initSmoothScroll();
 
-    // 5. Initialize Interactive Wedding Festivities Tabs & Showcase
+    // 6. Initialize Interactive Wedding Festivities Tabs & Showcase
     initFestivityTabs();
 
-    // 6. Initialize Sticky Frosted Navigation
+    // 7. Initialize Sticky Frosted Navigation
     initStickyNav();
 
-    // 7. Initialize Scrollspy Active Navigation Links
+    // 8. Initialize Scrollspy Active Navigation Links
     initScrollspy();
 
-    // 8. Initialize Viewport Scroll-Driven Reveals
+    // 9. Initialize Viewport Scroll-Driven Reveals
     initScrollReveal();
   }
 

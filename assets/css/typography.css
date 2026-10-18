@@ -273,6 +273,7 @@ time,
 
 .hero .place {
   display: block;
+  width: min(100%, 640px);
   max-width: calc(100% - 32px);
   padding: 8px clamp(12px, 1.8vw, 20px);
   border: 1px solid rgba(245, 217, 157, 0.36);
@@ -282,6 +283,8 @@ time,
   font-weight: 700;
   letter-spacing: var(--tracking-wider);
   line-height: 1.45;
+  overflow-wrap: break-word;
+  text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
   margin: clamp(10px, 1.4vh, 14px) 0 clamp(18px, 2.5vh, 26px);

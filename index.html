@@ -6,6 +6,10 @@
   <meta name="theme-color" content="#20040e">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="color-scheme" content="light">
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (!window.location.hash) window.scrollTo(0, 0);
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/ganesh-idol-emblem.png">
@@ -45,11 +49,11 @@
   <link rel="preload" as="image" href="assets/images/ganesh-idol-emblem.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=20261018-venue-contrast">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261018-venue-scroll-fix">
 
   <!-- Universal Scripts -->
   <script src="assets/js/countdown.js" defer></script>
-  <script src="assets/js/main.js?v=20261018-venue-contrast" defer></script>
+  <script src="assets/js/main.js?v=20261018-venue-scroll-fix" defer></script>
 
   <!-- Schema.org JSON-LD Structured Data for Supreme SEO -->
   <script type="application/ld+json">

@@ -153,13 +153,12 @@ a {
 /* Hero Section */
 .hero {
   min-height: 880px;
-  height: 100svh;
-  height: 100vh;
+  min-height: max(880px, 100svh);
   isolation: isolate;
   display: grid;
   place-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
   color: #fff;
   background: var(--wine);
@@ -193,7 +192,7 @@ a {
   text-align: center;
   max-width: 920px;
   width: 100%;
-  padding: clamp(56px, 7.5vh, 80px) 20px 38px;
+  padding: clamp(56px, 7.5vh, 80px) 20px clamp(66px, 8vh, 100px);
   animation: rise 0.9s ease-out both;
   z-index: 2;
   gap: clamp(32px, 4.8vh, 52px);
