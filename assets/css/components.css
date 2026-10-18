@@ -169,6 +169,12 @@
   color: var(--gold-pale);
 }
 
+.family-card-maternal {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - clamp(8px, 1.2vw, 14px));
+}
+
 .family-card-featured::before,
 .family-card-featured::after,
 .family-card-wishes::before,

@@ -135,6 +135,12 @@
   .family-card {
     min-height: 0;
   }
+
+  .family-card-maternal {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
