@@ -231,6 +231,16 @@ a {
   color: #fff;
 }
 
+.family {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(206, 157, 74, 0.14), transparent 28%),
+    radial-gradient(circle at 92% 85%, rgba(134, 44, 68, 0.12), transparent 24%),
+    linear-gradient(135deg, #fffaf1, #f2dfbf);
+  border-top: 1px solid var(--gold-border-subtle);
+  border-bottom: 1px solid var(--gold-border-subtle);
+}
+
 .countdown {
   background: var(--sand);
 }

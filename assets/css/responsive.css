@@ -110,6 +110,14 @@
   .timer {
     grid-template-columns: repeat(2, minmax(clamp(90px, 22vw, 130px), 1fr));
   }
+
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-card {
+    min-height: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -134,6 +142,10 @@
 
   .timer {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .family-members {
+    grid-template-columns: 1fr;
   }
 }
 
