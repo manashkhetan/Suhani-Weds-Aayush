@@ -219,6 +219,42 @@ time,
   text-shadow: 0 4px 35px rgba(245, 217, 157, 0.45);
 }
 
+.hero-couple {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.22em;
+  max-width: 1180px;
+}
+
+.hero-couple .couple-name {
+  white-space: nowrap;
+}
+
+.hero-lineage p {
+  margin: 0;
+  text-wrap: balance;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.72);
+}
+
+.lineage-parents {
+  color: #fff4dc;
+  font-family: var(--font-serif);
+  font-size: clamp(13px, 1.25vw, 17px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.lineage-grandparents {
+  margin-top: clamp(5px, 0.8vh, 9px) !important;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-size: clamp(10px, 0.92vw, 12px);
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  line-height: 1.55;
+}
+
 .hero .date {
   font-family: var(--font-display);
   font-size: clamp(20px, 2.6vw, 32px);
@@ -325,6 +361,20 @@ html[lang="hi"] .hero h1 {
   font-weight: 600;
   text-shadow: var(--shadow-hero-text);
   letter-spacing: normal !important;
+}
+
+html[lang="hi"] .hero-lineage .lineage-parents {
+  font-family: var(--font-hi-display);
+  font-size: clamp(15px, 1.4vw, 19px);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+html[lang="hi"] .hero-lineage .lineage-grandparents {
+  font-family: var(--font-hi-sans);
+  font-size: clamp(12px, 1.05vw, 14px);
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 html[lang="hi"] .hero .date {

@@ -152,7 +152,7 @@ a {
 
 /* Hero Section */
 .hero {
-  min-height: 750px;
+  min-height: 880px;
   height: 100svh;
   height: 100vh;
   isolation: isolate;
@@ -213,6 +213,23 @@ a {
   width: 100%;
 }
 
+.hero-lineage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 28px);
+  width: min(100%, 960px);
+  margin: 0 auto clamp(16px, 2.2vh, 24px);
+}
+
+.lineage-person {
+  min-width: 0;
+  padding: 0 clamp(10px, 1.8vw, 20px);
+}
+
+.lineage-person + .lineage-person {
+  border-left: 1px solid rgba(245, 217, 157, 0.42);
+}
+
 /* Standard Section Container */
 .section {
   padding: clamp(75px, 10vw, 135px) clamp(20px, 7vw, 105px);
@@ -234,11 +251,16 @@ a {
 .family {
   overflow: hidden;
   background:
-    radial-gradient(circle at 8% 15%, rgba(206, 157, 74, 0.14), transparent 28%),
-    radial-gradient(circle at 92% 85%, rgba(134, 44, 68, 0.12), transparent 24%),
-    linear-gradient(135deg, #fffaf1, #f2dfbf);
+    radial-gradient(circle at 8% 15%, rgba(206, 157, 74, 0.16), transparent 28%),
+    radial-gradient(circle at 92% 85%, rgba(134, 44, 68, 0.26), transparent 24%),
+    linear-gradient(135deg, #310a19, #16030b);
   border-top: 1px solid var(--gold-border-subtle);
   border-bottom: 1px solid var(--gold-border-subtle);
+}
+
+.family .eyebrow,
+.family .title {
+  color: var(--gold-pale);
 }
 
 .countdown {
