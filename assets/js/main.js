@@ -344,6 +344,51 @@
     const tabsContainer = document.querySelector('.tabs-container');
     if (!tabsContainer) return;
 
+    // Arrange every ceremony by its actual date and time before wiring the carousel.
+    const chronologicalOrder = [
+      'ganesh-pooja', // 07 Dec · 11:30 AM
+      'mangal-paath', // 08 Dec · 02:00 PM
+      'mehendi',      // 10 Dec · evening
+      'engagement',   // 11 Dec · 06:00 PM
+      'sangeet',      // 11 Dec · 07:00 PM
+      'mayra',        // 12 Dec · 10:30 AM
+      'haldi',        // 12 Dec · 11:30 AM
+      'barat',        // 12 Dec · evening
+      'wedding'       // 12 Dec · wedding muhurat
+    ];
+    const tabsNav = tabsContainer.querySelector('.festivity-tabs');
+    const panelsContainer = tabsContainer.querySelector('.festivity-panels');
+    const dotsContainer = tabsContainer.querySelector('.festivity-dots');
+    const originalIndexes = {
+      'mangal-paath': 0,
+      'ganesh-pooja': 1,
+      'haldi': 2,
+      'mehendi': 3,
+      'engagement': 4,
+      'sangeet': 5,
+      'mayra': 6,
+      'barat': 7,
+      'wedding': 8
+    };
+
+    chronologicalOrder.forEach(function (ceremony, index) {
+      const tab = tabsContainer.querySelector('#tab-' + ceremony);
+      const panel = tabsContainer.querySelector('#panel-' + ceremony);
+      const dot = dotsContainer.querySelector('.dot-btn[data-index="' + originalIndexes[ceremony] + '"]');
+
+      if (tab) {
+        tabsNav.appendChild(tab);
+        tab.dataset.index = String(index);
+        const badge = tab.querySelector('.tab-badge');
+        if (badge) badge.textContent = String(index + 1).padStart(2, '0');
+      }
+      if (panel) panelsContainer.appendChild(panel);
+      if (dot) {
+        dotsContainer.appendChild(dot);
+        dot.dataset.index = String(index);
+      }
+    });
+
     const tabs = Array.from(tabsContainer.querySelectorAll('.festivity-tab-btn'));
     const panels = Array.from(tabsContainer.querySelectorAll('.festivity-panel'));
     const dots = Array.from(tabsContainer.querySelectorAll('.dot-btn'));
@@ -445,6 +490,9 @@
         switchTab(currentIndex + 1, false);
       });
     }
+
+    // The first visible ceremony is the earliest one: Ganesh Sthapana.
+    switchTab(0, false);
   }
 
   function initStickyNav() {
