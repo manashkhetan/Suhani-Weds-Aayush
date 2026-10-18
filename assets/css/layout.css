@@ -223,11 +223,13 @@ a {
 
 .lineage-person {
   min-width: 0;
-  padding: 0 clamp(10px, 1.8vw, 20px);
+  padding: clamp(12px, 1.5vw, 18px) clamp(12px, 1.8vw, 22px);
+  border: 1px solid rgba(245, 217, 157, 0.25);
+  background: linear-gradient(145deg, rgba(33, 4, 14, 0.34), rgba(77, 21, 42, 0.18));
 }
 
 .lineage-person + .lineage-person {
-  border-left: 1px solid rgba(245, 217, 157, 0.42);
+  border-left-color: rgba(245, 217, 157, 0.25);
 }
 
 /* Standard Section Container */

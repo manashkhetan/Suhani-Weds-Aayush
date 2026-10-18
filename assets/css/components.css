@@ -206,13 +206,14 @@
   color: var(--gold-pale);
 }
 
-.family-phone-light {
-  color: var(--gold-light);
-}
-
-.family-phone-light:hover,
-.family-phone-light:focus-visible {
-  color: #fff;
+.family-card-featured .family-phone-light,
+.family-card-featured .family-phone-light:visited,
+.family-card-featured .family-phone-light:hover,
+.family-card-featured .family-phone-light:active,
+.family-card-featured .family-phone-light:focus,
+.family-card-featured .family-phone-light:focus-visible {
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .family-name-paired {

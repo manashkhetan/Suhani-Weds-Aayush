@@ -37,14 +37,6 @@
     margin-bottom: clamp(14px, 2vh, 20px);
   }
 
-  .hero-couple {
-    gap: 0.12em;
-  }
-
-  .hero-couple .couple-name {
-    white-space: normal;
-  }
-
   .hero-lineage {
     grid-template-columns: 1fr;
     gap: 13px;
@@ -52,13 +44,11 @@
   }
 
   .lineage-person {
-    padding: 0;
+    padding: 14px 16px;
   }
 
   .lineage-person + .lineage-person {
-    padding-top: 13px;
-    border-top: 1px solid rgba(245, 217, 157, 0.42);
-    border-left: 0;
+    border-left-color: rgba(245, 217, 157, 0.25);
   }
 
   .festivity-tabs {
