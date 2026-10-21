@@ -141,6 +141,12 @@
     justify-self: stretch;
     width: auto;
   }
+
+  .family-card-wishes {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
