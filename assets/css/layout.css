@@ -215,9 +215,18 @@ a {
 .hero-lineage {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(14px, 2vw, 28px);
+  gap: clamp(48px, 6vw, 82px);
   width: min(100%, 960px);
   margin: 0 auto clamp(16px, 2.2vh, 24px);
+  position: relative;
+}
+
+.hero-connector {
+  position: absolute;
+  top: clamp(22px, 2.4vw, 32px);
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
 }
 
 .lineage-person {

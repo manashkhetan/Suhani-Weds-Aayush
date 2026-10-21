@@ -46,6 +46,13 @@
     max-width: 520px;
   }
 
+  .hero-connector {
+    position: static;
+    justify-self: center;
+    transform: none;
+    margin: -2px 0;
+  }
+
   .lineage-person {
     padding: 14px 16px;
   }
