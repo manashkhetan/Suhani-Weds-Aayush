@@ -251,6 +251,7 @@ a {
 
 .family {
   overflow: visible;
+  padding-bottom: clamp(110px, 13vw, 170px);
   background:
     radial-gradient(circle at 8% 15%, rgba(206, 157, 74, 0.16), transparent 28%),
     radial-gradient(circle at 92% 85%, rgba(134, 44, 68, 0.26), transparent 24%),

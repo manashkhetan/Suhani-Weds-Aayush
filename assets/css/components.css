@@ -127,9 +127,16 @@
   padding: clamp(30px, 4vw, 48px) clamp(20px, 3.5vw, 42px);
   overflow: visible;
   border: 1px solid rgba(143, 92, 27, 0.36);
-  background: linear-gradient(145deg, #fffaf1, #f4e3c5);
-  box-shadow: 0 16px 40px rgba(61, 17, 34, 0.1);
-  transition: transform var(--transition-card), box-shadow var(--transition-card), border-color var(--transition-card);
+  border-color: rgba(212, 175, 103, 0.62);
+  background:
+    radial-gradient(circle at 50% -30%, rgba(242, 217, 154, 0.2), transparent 58%),
+    linear-gradient(145deg, #57152d, #2b0714);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 244, 222, 0.16),
+    0 0 12px rgba(212, 175, 103, 0.12),
+    0 0 24px rgba(212, 175, 103, 0.08),
+    0 16px 40px rgba(15, 2, 8, 0.34);
+  transition: transform var(--transition-card), box-shadow var(--transition-card), border-color var(--transition-card), background var(--transition-card);
 }
 
 .family-card::before,
@@ -138,7 +145,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  border-color: var(--gold-deep);
+  border-color: var(--gold-light);
   opacity: 0.65;
   pointer-events: none;
 }
@@ -159,15 +166,26 @@
 
 .family-card:hover {
   z-index: 1;
-  transform: translateY(-5px);
-  border-color: var(--gold);
-  box-shadow: 0 22px 50px rgba(61, 17, 34, 0.18);
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 244, 222, 0.22),
+    0 0 18px rgba(212, 175, 103, 0.22),
+    0 0 34px rgba(212, 175, 103, 0.12),
+    0 22px 50px rgba(15, 2, 8, 0.42);
 }
+
+.family-card.reveal:nth-child(2) { transition-delay: 0.12s; }
+.family-card.reveal:nth-child(3) { transition-delay: 0.24s; }
+.family-card.reveal:nth-child(4) { transition-delay: 0.36s; }
+.family-card.reveal:nth-child(5) { transition-delay: 0.48s; }
 
 .family-card-featured,
 .family-card-wishes {
-  background: linear-gradient(145deg, #fffaf1, #f4e3c5);
-  color: var(--ink);
+  background:
+    radial-gradient(circle at 50% -30%, rgba(242, 217, 154, 0.2), transparent 58%),
+    linear-gradient(145deg, #57152d, #2b0714);
+  color: var(--gold-pale);
 }
 
 .family-card-maternal {
@@ -186,12 +204,12 @@
 .family-card-featured::after,
 .family-card-wishes::before,
 .family-card-wishes::after {
-  border-color: var(--gold-deep);
+  border-color: var(--gold-light);
 }
 
 .family-role {
   margin: 0 0 clamp(16px, 2vw, 22px);
-  color: var(--gold-deep);
+  color: var(--soft-gold, #f2d99a);
   font-family: var(--font-sans);
   font-size: clamp(10px, 1vw, 12px);
   font-weight: 700;
@@ -201,12 +219,12 @@
 
 .family-card-featured .family-role,
 .family-card-wishes .family-role {
-  color: var(--gold-deep);
+  color: var(--soft-gold, #f2d99a);
 }
 
 .family-name {
   margin: 0;
-  color: var(--ink);
+  color: var(--gold-pale);
   font-family: var(--font-display);
   font-size: clamp(24px, 2.5vw, 34px);
   font-weight: 600;
@@ -216,7 +234,7 @@
 
 .family-card-featured .family-name,
 .family-card-wishes .family-name {
-  color: var(--ink);
+  color: var(--gold-pale);
 }
 
 .family-phone-light,
@@ -225,7 +243,7 @@
 .family-phone-light:active,
 .family-phone-light:focus,
 .family-phone-light:focus-visible {
-  color: var(--rose);
+  color: #FFFFFF;
   opacity: 1;
 }
 
@@ -236,7 +254,7 @@
 
 .family-address {
   margin: clamp(18px, 2vw, 25px) 0 0;
-  color: var(--ink-muted);
+  color: rgba(255, 244, 222, 0.88);
   font-family: var(--font-sans);
   font-size: clamp(11px, 1.1vw, 13px);
   font-style: normal;
@@ -257,7 +275,7 @@
 .family-phone {
   display: inline-block;
   margin-top: 8px;
-  color: var(--rose);
+  color: var(--gold-pale);
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 700;
@@ -267,7 +285,7 @@
 
 .family-phone:hover,
 .family-phone:focus-visible {
-  color: var(--gold-deep);
+  color: #FFFFFF;
   transform: translateY(-1px);
 }
 
@@ -279,7 +297,7 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  color: var(--ink);
+  color: var(--gold-pale);
   font-family: var(--font-display);
   font-size: clamp(19px, 2vw, 27px);
   font-weight: 600;
@@ -297,8 +315,8 @@
 .family-closing {
   margin: clamp(24px, 3vw, 32px) 0 0;
   padding-top: clamp(16px, 2vw, 20px);
-  border-top: 1px solid var(--line);
-  color: var(--rose);
+  border-top: 1px solid rgba(242, 217, 154, 0.38);
+  color: var(--soft-gold, #f2d99a);
   font-family: var(--font-display);
   font-size: clamp(19px, 2vw, 27px);
   font-weight: 600;
@@ -306,6 +324,21 @@
 
 .family-back {
   margin-top: clamp(34px, 4vw, 48px);
+}
+
+.family .family-back {
+  border-color: var(--gold-light);
+  background: rgba(77, 21, 42, 0.42);
+  color: var(--gold-pale);
+  box-shadow: 0 0 16px rgba(212, 175, 103, 0.13);
+}
+
+.family .family-back:hover,
+.family .family-back:focus-visible {
+  border-color: var(--gold-light);
+  background: var(--gold-light);
+  color: var(--wine);
+  box-shadow: 0 0 24px rgba(212, 175, 103, 0.28);
 }
 
 .family-quick-link {
