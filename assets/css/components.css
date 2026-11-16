@@ -581,18 +581,40 @@ html[lang="hi"] .family-closing {
 
 .festivity-panel.active {
   display: block;
-  animation: panelFadeIn 0.35s ease-out forwards;
+  animation: panelFadeIn 0.62s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 @keyframes panelFadeIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(18px) scale(0.99);
+    filter: blur(3px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
+}
+
+@keyframes festiveArtReveal {
+  from { opacity: 0; transform: translateY(14px) scale(0.965); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes festiveTextReveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes festiveGlow {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.88); }
+  50% { opacity: 0.52; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes festiveTwinkle {
+  0%, 100% { opacity: 0.5; transform: scale(0.82) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.18) rotate(18deg); }
 }
 
 .festivity-card {
@@ -621,6 +643,15 @@ html[lang="hi"] .family-closing {
 .festivity-card::before { top: 8px; left: 10px; }
 .festivity-card::after { bottom: 8px; right: 10px; }
 
+.festivity-panel.active .festivity-card::before,
+.festivity-panel.active .festivity-card::after {
+  animation: festiveTwinkle 2.8s ease-in-out infinite;
+}
+
+.festivity-panel.active .festivity-card::after {
+  animation-delay: 1.4s;
+}
+
 /* Left Art Visual Column */
 .panel-visual {
   display: flex;
@@ -631,6 +662,22 @@ html[lang="hi"] .family-closing {
   border-right: 1px solid var(--gold-border-subtle);
   position: relative;
   overflow: hidden;
+}
+
+/* A warm, theme-colored glow gives each celebration a little more life. */
+.panel-visual::before {
+  content: "";
+  position: absolute;
+  width: clamp(180px, 22vw, 300px);
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  background: var(--theme-aura, rgba(245, 217, 157, 0.3));
+  filter: blur(38px);
+  opacity: 0.42;
+  pointer-events: none;
+  animation: festiveGlow 4.8s ease-in-out infinite;
 }
 
 .patrika-frame {
@@ -693,6 +740,20 @@ html[lang="hi"] .family-closing {
   flex-direction: column;
   justify-content: center;
 }
+
+.festivity-panel.active .patrika-frame {
+  animation: festiveArtReveal 0.78s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.festivity-panel.active .panel-content > * {
+  animation: festiveTextReveal 0.58s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.festivity-panel.active .panel-content > :nth-child(1) { animation-delay: 0.08s; }
+.festivity-panel.active .panel-content > :nth-child(2) { animation-delay: 0.14s; }
+.festivity-panel.active .panel-content > :nth-child(3) { animation-delay: 0.2s; }
+.festivity-panel.active .panel-content > :nth-child(4) { animation-delay: 0.26s; }
+.festivity-panel.active .panel-content > :nth-child(5) { animation-delay: 0.32s; }
 
 .panel-header {
   margin-bottom: clamp(14px, 2vh, 20px);
@@ -1164,6 +1225,14 @@ html[lang="hi"] .family-closing {
     animation: none !important;
   }
   .lang-modal-card {
+    animation: none !important;
+  }
+  .festivity-panel.active,
+  .festivity-panel.active .patrika-frame,
+  .festivity-panel.active .panel-content > *,
+  .festivity-panel.active .festivity-card::before,
+  .festivity-panel.active .festivity-card::after,
+  .panel-visual::before {
     animation: none !important;
   }
 }
