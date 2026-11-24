@@ -46,7 +46,7 @@
         tab1_name: 'Mangal Paath',
         tab1_date: '08 Dec',
         tab2_name: 'Ganesh Sthapana',
-        tab2_date: '07 Dec',
+        tab2_date: '06 Dec',
         tab3_name: 'Haldi',
         tab3_date: '12 Dec',
         tab4_name: 'Mehendi',
@@ -75,8 +75,8 @@
         panel2_tag: '✦ Sacred Invocation ✦',
         panel2_title: 'Shree Ganesh Sthapana &amp; Pooja',
         panel2_subtitle: 'Invoking Lord Ganesha for auspicious beginnings',
-        panel2_date: 'Monday, 07 December 2026',
-        panel2_time: 'Morning 11:30 AM onwards',
+        panel2_date: 'Sunday, 06 December 2026',
+        panel2_time: 'Morning 10:15 AM onwards',
         panel2_venue: 'Khetan Home, Jhunjhunu',
         panel2_desc: 'Invoking the supreme blessings of Vighnaharta Lord Ganesha with traditional Vedic chants, modak offerings, and Mangal Sthapana to ensure our wedding journey proceeds smoothly and joyfully.',
         panel3_tag: '✦ Auspicious Ritual ✦',
@@ -187,7 +187,7 @@
         tab1_name: 'मंगल पाठ',
         tab1_date: '08 Dec',
         tab2_name: 'गणेश स्थापना',
-        tab2_date: '07 Dec',
+        tab2_date: '06 Dec',
         tab3_name: 'हल्दी',
         tab3_date: '12 Dec',
         tab4_name: 'मेहंदी',
@@ -216,8 +216,8 @@
         panel2_tag: '✦ विघ्नहर्ता पूजन ✦',
         panel2_title: 'श्री गणेश स्थापना एवं पूजन',
         panel2_subtitle: 'प्रथम पूज्य भगवान श्री गणेश जी की पावन आराधना',
-        panel2_date: 'सोमवार, 07 दिसंबर 2026',
-        panel2_time: 'प्रातः 11:30 बजे से',
+        panel2_date: 'रविवार, 06 दिसंबर 2026',
+        panel2_time: 'प्रातः 10:15 बजे से',
         panel2_venue: 'खेतान निवास, झुंझुनू',
         panel2_desc: 'समस्त मांगलिक कार्यों के निर्विघ्न संपन्न होने हेतु प्रथम पूज्य विघ्नहर्ता भगवान श्री गणेश जी की वैदिक मंत्रोच्चार, मोदक भोग एवं मंगल स्थापना के साथ विधि-विधान से पावन पूजा-अर्चना।',
         panel3_tag: '✦ शुभ शुरुआत ✦',
@@ -433,7 +433,7 @@
 
     // Arrange every ceremony by its actual date and time before wiring the carousel.
     const chronologicalOrder = [
-      'ganesh-pooja', // 07 Dec · 11:30 AM
+      'ganesh-pooja', // 06 Dec · 10:15 AM
       'mangal-paath', // 08 Dec · 02:00 PM
       'mehendi',      // 10 Dec · evening
       'engagement',   // 11 Dec · 06:00 PM
